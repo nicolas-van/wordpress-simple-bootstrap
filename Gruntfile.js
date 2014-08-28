@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           paths: ["."]
         },
         files: {
-          "static/style.css": "less/style.less",
+          "style.css": "less/style.less",
         },
       }
     },
@@ -19,21 +19,21 @@ module.exports = function(grunt) {
         tasks: ['less']
       },
       cssmin: {
-        files: ["static/style.css"],
+        files: ["style.css"],
         tasks: ['cssmin'],
       },
     },
     cssmin: {
       dist: {
         files: {
-          'static/style.min.css': "static/style.css",
+          'style.min.css': "style.css",
         }
       },
     },
     uglify: {
       dist: {
         files: {
-          'static/app.min.js': [
+          'app.min.js': [
             "bower_components/respond/dest/respond.src.js",
             "bower_components/html5shiv/dist/html5shiv.js",
             "bower_components/bootstrap/dist/js/bootstrap.js",
