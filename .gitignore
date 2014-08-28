@@ -20,3 +20,6 @@ Desktop.ini
 $RECYCLE.BIN/
 
 codekit-config.json
+bower_components
+node_modules
+static
