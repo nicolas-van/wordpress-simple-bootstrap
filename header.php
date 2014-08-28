@@ -16,21 +16,6 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
-			<!-- media-queries.js (fallback) -->
-		<!--[if lt IE 9]>
-			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
-		<![endif]-->
-
-		<!-- html5.js -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->	
-		
-			<!-- respond.js -->
-		<!--[if lt IE 9]>
-		          <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-		<![endif]-->	
 	</head>
 	
 	<body <?php body_class(); ?>>
