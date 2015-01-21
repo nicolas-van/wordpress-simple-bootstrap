@@ -488,29 +488,31 @@ add_filter( 'wp_title', 'wp_bootstrap_wp_title', 10, 2 );
 
 function display_post_meta() {
 ?>
-  <p class="meta">
-    <span class="meta-part">
+
+  <ul class="meta text-muted list-inline">
+    <li>
       <a href="<?php echo esc_url(get_permalink()) ?>">
         <span class="glyphicon glyphicon-time"></span>
         <?php echo esc_html(get_the_date()); ?>
       </a>
-    </span>
-    <span class="meta-part">
+    </li>
+    <li>
       <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')));?>">
         <span class="glyphicon glyphicon-user"></span>
         <?php echo esc_html(get_the_author()); ?>
       </a>
-    </span class="meta-part">
+    </li>
     <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-    <span class="meta-part">
+    <li>
       <a href="<?php echo esc_url(get_comments_link()); ?>">
         <span class="glyphicon glyphicon-comment"></span>
         <?php echo esc_html(__('Comments')); ?>
       </a>
-    </span>
+    </li>
     <?php endif; ?>
-    <?php edit_post_link(__( 'Edit'), '<span class="meta-part"><span class="glyphicon glyphicon-pencil"></span> ', '</span>'); ?>
-  </p>
+    <?php edit_post_link(__( 'Edit'), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
+  </ul>
+
 <?php
 }
 
