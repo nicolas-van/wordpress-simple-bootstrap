@@ -22,3 +22,5 @@ $RECYCLE.BIN/
 codekit-config.json
 bower_components
 node_modules
+style.css
+style.min.css

@@ -28,13 +28,13 @@
 						<footer>
 			
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-							
-							<?php 
-							// only show edit button if user has permission to edit posts
-							if( $user_level > 0 ) { 
-							?>
-							<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-success edit-post"><i class="icon-pencil icon-white"></i> <?php _e("Edit post","wpbootstrap"); ?></a>
-							<?php } ?>
+
+							<div class="nav-links">
+								<?php 
+								previous_post_link( '%link', '<span class="meta-nav">'.__( 'Previous Post').'</span>%title' );
+								next_post_link( '%link', "<span class='meta-nav'>".__( 'Next Post')."</span>%title" );
+								?>
+							</div>
 							
 						</footer> <!-- end article footer -->
 					

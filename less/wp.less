@@ -1,5 +1,7 @@
 /* All the styles that you would normally find in the style.css */
 
+@separation-color: @gray-lighter;
+
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
 .clearfix:before,
@@ -125,15 +127,18 @@ ul.nav {
     .meta-part {
         margin-right: 10px;
     }
-    a, a:hover, a:focus {
+    a {
         color: inherit;
-        text-underline: inherit;
+        text-underline: none;
+        &:hover, &:focus {
+            color: @link-hover-color;
+        }
     }
 }
 
 #main article{
     margin-bottom: 18px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid @separation-color;
     padding: 0 0 9px;
 }
 
@@ -582,5 +587,24 @@ blockquote.pull-left{
     .comment .vcard .comment-text{
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+.nav-links {
+    a {
+        display: block;
+        color: inherit;
+        font-family: @font-family-base;
+        &:hover, &:focus {
+            text-decoration: none;
+            color: @link-hover-color;
+        }
+        .meta-nav {
+            display: block;
+            font-family: @headings-font-family;
+            font-weight: bold;
+        }
+        border-top: 1px solid @separation-color;
+        padding: 15px 0;
     }
 }
