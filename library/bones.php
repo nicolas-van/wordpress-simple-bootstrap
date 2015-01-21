@@ -74,7 +74,7 @@ function wp_bootstrap_theme_support() {
 	register_nav_menus(                      // wp3+ menus
 		array( 
 			'main_nav' => 'The Main Menu',   // main nav in header
-			'footer_links' => 'Footer Links' // secondary nav in footer
+			//'footer_links' => 'Footer Links' // secondary nav in footer
 		)
 	);	
 }
