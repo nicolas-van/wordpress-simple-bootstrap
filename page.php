@@ -21,7 +21,7 @@
 						
 						<footer>
 			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","wpbootstrap") . ':</span> ', ', ', '</p>'); ?>
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 							
 						</footer> <!-- end article footer -->
 					

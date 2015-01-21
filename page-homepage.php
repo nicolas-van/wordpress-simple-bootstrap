@@ -45,7 +45,7 @@ Template Name: Homepage
 						
 						<footer>
 			
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
+							<p class="clearfix"><?php the_tags('<span class="tags">', ' ', '</span>'); ?></p>
 							
 						</footer> <!-- end article footer -->
 					

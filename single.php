@@ -27,7 +27,7 @@
 						
 						<footer>
 			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","wpbootstrap") . ':</span> ', ' ', '</p>'); ?>
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 							
 							<?php 
 							// only show edit button if user has permission to edit posts
