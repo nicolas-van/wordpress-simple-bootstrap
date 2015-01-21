@@ -1,18 +1,12 @@
-			<footer role="contentinfo">
-			
-				<div id="inner-footer" class="clearfix">
-          <hr />
-          <div id="widget-footer" class="vertical-nav clearfix row">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
-            <?php endif; ?>
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
-            <?php endif; ?>
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
-            <?php endif; ?>
-          </div>
-					
-				
-				</div> <!-- end #inner-footer -->
+			<footer id="inner-footer" class="row vertical-nav" role="contentinfo">
+        <hr />
+		
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
+        <?php endif; ?>
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
+        <?php endif; ?>
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
+        <?php endif; ?>
 				
 			</footer> <!-- end footer -->
 		
