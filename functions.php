@@ -490,8 +490,10 @@ function display_post_meta() {
 ?>
   <p class="meta">
     <span class="meta-part">
-      <span class="glyphicon glyphicon-time"></span>
-      <?php echo esc_html(get_the_date()); ?>
+      <a href="<?php echo esc_url(get_permalink()) ?>">
+        <span class="glyphicon glyphicon-time"></span>
+        <?php echo esc_html(get_the_date()); ?>
+      </a>
     </span>
     <span class="meta-part">
       <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')));?>">
