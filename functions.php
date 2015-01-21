@@ -439,7 +439,7 @@ function add_active_class($classes, $item) {
 if( !function_exists("theme_styles") ) {  
     function theme_styles() { 
         // For child themes
-        wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), '1.0', 'all' );
+        wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null, 'all' );
         wp_enqueue_style( 'wpbs-style' );
     }
 }
@@ -452,7 +452,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'bower-libs', 
       get_template_directory_uri() . '/app.min.js', 
       array('jquery'), 
-      '1.2' );
+      null );
   
     wp_enqueue_script('bower-libs');
     
