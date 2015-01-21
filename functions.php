@@ -128,20 +128,20 @@ function wp_bootstrap_comments($comment, $args, $depth) {
 				</div>
 				<div class="col-sm-9 comment-text">
 					<?php printf('<h4>%s</h4>', get_comment_author_link()) ?>
-					<?php edit_comment_link(__('Edit','wpbootstrap'),'<span class="edit-comment btn btn-sm btn-info"><i class="glyphicon-white glyphicon-pencil"></i>','</span>') ?>
+          <a class="edit-comment btn btn-sm btn-info" href="<?php echo esc_url(get_edit_comment_link()); ?>"><span class="glyphicon-white glyphicon-pencil"></span> <?php echo esc_html(__("Edit")); ?></a>
                     
-                    <?php if ($comment->comment_approved == '0') : ?>
-       					<div class="alert-message success">
-          				<p><?php _e('Your comment is awaiting moderation.','wpbootstrap') ?></p>
-          				</div>
+          <?php if ($comment->comment_approved == '0') : ?>
+       		<div class="alert-message success">
+          	<p><?php _e('Your comment is awaiting moderation.','wpbootstrap') ?></p>
+          </div>
 					<?php endif; ?>
                     
-                    <?php comment_text() ?>
+          <?php comment_text() ?>
                     
-                    <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
-                    
+          <time><?php comment_date(); ?></time>
+
 					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-                </div>
+        </div>
 			</div>
 		</article>
     <!-- </li> is added by wordpress automatically -->
@@ -485,5 +485,31 @@ function wp_bootstrap_wp_title( $title, $sep ) {
   return $title;
 }
 add_filter( 'wp_title', 'wp_bootstrap_wp_title', 10, 2 );
+
+function display_post_meta() {
+?>
+  <p class="meta">
+    <span class="meta-part">
+      <span class="glyphicon glyphicon-time"></span>
+      <?php echo esc_html(get_the_date()); ?>
+    </span>
+    <span class="meta-part">
+      <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')));?>">
+        <span class="glyphicon glyphicon-user"></span>
+        <?php echo esc_html(get_the_author()); ?>
+      </a>
+    </span class="meta-part">
+    <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+    <span class="meta-part">
+      <a href="<?php echo esc_url(get_comments_link()); ?>">
+        <span class="glyphicon glyphicon-comment"></span>
+        <?php echo esc_html(__('Comments')); ?>
+      </a>
+    </span>
+    <?php endif; ?>
+    <?php edit_post_link(__( 'Edit'), '<span class="meta-part"><span class="glyphicon glyphicon-pencil"></span> ', '</span>'); ?>
+  </p>
+<?php
+}
 
 ?>
