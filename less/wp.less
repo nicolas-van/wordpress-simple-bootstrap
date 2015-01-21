@@ -1,7 +1,5 @@
 /* All the styles that you would normally find in the style.css */
 
-@separation-color: @gray-lighter;
-
 .link-without-style() {
     a {
         color: inherit;
@@ -139,7 +137,7 @@ ul.nav {
 
 #main article{
     margin-bottom: 18px;
-    border-bottom: 1px solid @separation-color;
+    border-bottom: 1px solid @hr-border;
     padding: 0 0 9px;
 
     &:last-of-type {
@@ -605,7 +603,7 @@ blockquote.pull-left{
             font-family: @headings-font-family;
             font-weight: bold;
         }
-        border-top: 1px solid @separation-color;
+        border-top: 1px solid @hr-border;
         padding: 15px 0;
     }
 }
@@ -618,8 +616,9 @@ blockquote.pull-left{
     .widget ul {
         .list-unstyled();
         li {
+            .link-without-style();
             padding: 5px 0;
-            border-bottom: 1px solid @separation-color;
+            border-bottom: 1px solid @hr-border;
             &:last-of-type {
                 border-bottom: 0px;
             }
