@@ -471,13 +471,13 @@ function display_post_meta() {
     </li>
     <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
     <li>
-      <a href="<?php echo esc_url(get_comments_link()); ?>">
-        <span class="glyphicon glyphicon-comment"></span>
-        <?php echo esc_html(__('Comments')); ?>
-      </a>
+      <?php
+        $sp = '<span class="glyphicon glyphicon-comment"></span> ';
+        comments_popup_link( $sp.esc_html(__( 'Leave a comment')), $sp.esc_html(__( '1 Comment')), $sp.esc_html(__( '% Comments')) );
+      ?>
     </li>
     <?php endif; ?>
-    <?php edit_post_link(__( 'Edit'), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
+    <?php edit_post_link(esc_html(__( 'Edit')), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
   </ul>
 
 <?php
