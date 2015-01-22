@@ -268,6 +268,23 @@ video {
     .comment-body {
         padding: 30px 0;
         border-bottom: 1px solid @hr-border;
+
+        a.comment-edit-link {
+            &::before {
+                content: "\270f";
+                .glyphicon();
+                padding-right: 3px;
+            }
+            .text-muted();
+            text-decoration: none;
+            &:hover, &:focus {
+                text-decoration: none;
+                color: @link-hover-color;
+            }
+        }
+    }
+
+    .comment .comment-body {
         &>* {
             padding-left: 50px;
             position: relative;
@@ -293,17 +310,9 @@ video {
             .link-without-style();
             .text-muted();
 
-            a {
+            a:first-of-type {
                 &::before {
                     content: "\e023";
-                    .glyphicon();
-                    padding-right: 3px;
-                }
-            }
-
-            a.comment-edit-link {
-                &::before {
-                    content: "\270f";
                     .glyphicon();
                     padding-right: 3px;
                 }
@@ -363,20 +372,6 @@ video {
         .btn;
         .btn-primary;
     }
-}
-
-
-#pings{
-    margin-bottom: 9px;
-}
-
-ol.pinglist{
-    list-style-type: none;
-    margin: 0 0 9px 0;
-}
-
-ol.commentlist #respond{
-    padding: 5px 10px;
 }
 
 /* specific post-type styles */
