@@ -22,7 +22,7 @@ The comments page for Bones
 	<h3><?php echo __("Comments")?></h3>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<ul id="comment-nav-above" class="navigation comment-navigation list-inline" role="navigation">
+	<ul id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 		<li class="nav-previous"><?php previous_comments_link( '<span class="glyphicon glyphicon-arrow-left"></span> '.__("Older comments","wpbootstrap") ); ?></li>
 		<li class="nav-next"><?php next_comments_link( __("Newer comments","wpbootstrap").' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
 	</ul>
@@ -37,7 +37,7 @@ The comments page for Bones
 	</ol>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<ul id="comment-nav-below" class="navigation comment-navigation list-inline" role="navigation">
+	<ul id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 		<li class="nav-previous"><?php previous_comments_link( '<span class="glyphicon glyphicon-arrow-left"></span> '.__("Older comments","wpbootstrap") ); ?></li>
 		<li class="nav-next"><?php next_comments_link( __("Newer comments","wpbootstrap").' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
 	</ul>
