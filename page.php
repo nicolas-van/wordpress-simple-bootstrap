@@ -12,6 +12,8 @@
 							
 							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
 						
+							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+						
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix" itemprop="articleBody">
@@ -20,9 +22,7 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-			
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-							
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
