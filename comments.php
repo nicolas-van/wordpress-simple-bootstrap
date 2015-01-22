@@ -18,8 +18,8 @@ The comments page for Bones
 <div id="comments">
 
 <?php if ( have_comments() ) : ?>
-	<?php if ( ! empty($comments_by_type['comment']) ) : ?>
-	<h3><?php comments_number('<span>' . __("No","wpbootstrap") . '</span> ' . __("Responses","wpbootstrap") . '', '<span>' . __("One","wpbootstrap") . '</span> ' . __("Response","wpbootstrap") . '', '<span>%</span> ' . __("Responses","wpbootstrap") );?> <?php _e("to","wpbootstrap"); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+	<?php if ( have_comments() ) : ?>
+	<h3><?php echo __("Comments")?></h3>
 
 	<nav id="comment-nav">
 		<ul class="clearfix">
@@ -29,17 +29,13 @@ The comments page for Bones
 	</nav>
 	
 	<ol class="commentlist">
-		<?php wp_list_comments('type=comment&callback=wp_bootstrap_comments'); ?>
+		<?php wp_list_comments( array(
+				'style'      => 'ol',
+				'short_ping' => true,
+				'avatar_size'=> 34,
+			) ); ?>
 	</ol>
 	
-	<?php endif; ?>
-	
-	<?php if ( ! empty($comments_by_type['pings']) ) : ?>
-		<h3 id="pings">Trackbacks/Pingbacks</h3>
-		
-		<ol class="pinglist">
-			<?php wp_list_comments('type=pings&callback=list_pings'); ?>
-		</ol>
 	<?php endif; ?>
 	
 	<nav id="comment-nav">
