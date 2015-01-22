@@ -21,12 +21,12 @@ The comments page for Bones
 	<?php if ( have_comments() ) : ?>
 	<h3><?php echo __("Comments")?></h3>
 
-	<nav id="comment-nav">
-		<ul class="clearfix">
-	  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
-	  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
-	 	</ul>
-	</nav>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+	<ul id="comment-nav-above" class="navigation comment-navigation list-inline" role="navigation">
+		<li class="nav-previous"><?php previous_comments_link( '<span class="glyphicon glyphicon-arrow-left"></span> '.__("Older comments","wpbootstrap") ); ?></li>
+		<li class="nav-next"><?php next_comments_link( __("Newer comments","wpbootstrap").' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
+	</ul>
+	<?php endif; ?>
 	
 	<ol class="commentlist">
 		<?php wp_list_comments( array(
@@ -35,15 +35,15 @@ The comments page for Bones
 				'avatar_size'=> 34,
 			) ); ?>
 	</ol>
-	
+
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+	<ul id="comment-nav-below" class="navigation comment-navigation list-inline" role="navigation">
+		<li class="nav-previous"><?php previous_comments_link( '<span class="glyphicon glyphicon-arrow-left"></span> '.__("Older comments","wpbootstrap") ); ?></li>
+		<li class="nav-next"><?php next_comments_link( __("Newer comments","wpbootstrap").' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
+	</ul>
 	<?php endif; ?>
 	
-	<nav id="comment-nav">
-		<ul class="clearfix">
-	  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
-	  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
-		</ul>
-	</nav>
+	<?php endif; ?>
   
 	<?php else : // this is displayed if there are no comments so far ?>
 
