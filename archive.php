@@ -40,13 +40,13 @@
 							
 							<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
+							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							
 							<?php display_post_meta() ?>
 						
 						</header> <!-- end article header -->
 					
 						<section class="post_content">
-						
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 						
 							<?php the_excerpt(); ?>
 					

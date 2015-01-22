@@ -133,6 +133,7 @@ ul.nav {
 
 #main .meta {
     .link-without-style();
+    margin-bottom: 20px;
 }
 
 #main article{
@@ -178,8 +179,7 @@ div[id*='attachment_']{
 }
 
 #main article img{
-    height: auto;
-    max-width: 100%;
+    .img-responsive();
 }
 
 img.alignleft{
@@ -379,7 +379,7 @@ video {
 /* image attachment */
 
 .attachment #main .post_content img{
-    max-width: 100%;
+    .img-responsive();
 }
 
 .ie8 #main .media-grid img{
@@ -610,4 +610,9 @@ blockquote.pull-left{
             }
         }
     }
+}
+
+.attachment-wpbs-featured {
+    .img-thumbnail();
+    margin-bottom: 20px;
 }
