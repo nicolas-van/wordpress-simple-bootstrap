@@ -40,7 +40,7 @@
 							
 							<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							<?php the_post_thumbnail('wpbs-featured-small'); ?>
 							
 							<?php display_post_meta() ?>
 						

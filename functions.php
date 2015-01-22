@@ -23,9 +23,8 @@ if ( ! isset( $content_width ) ) $content_width = 580;
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'wpbs-featured', 780, 300, true );
-add_image_size( 'wpbs-featured-home', 970, 311, true);
-add_image_size( 'wpbs-featured-carousel', 970, 400, true);
+add_image_size( 'wpbs-featured-small', 780);
+add_image_size( 'wpbs-featured-big', 1170);
 
 /* 
 to add more sizes, simply copy a line from above 
