@@ -57,7 +57,7 @@ function wp_bootstrap_theme_support() {
 	add_theme_support('automatic-feed-links'); // rss thingy
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 	// adding post format support
-	add_theme_support( 'post-formats',      // post formats
+	/*add_theme_support( 'post-formats',      // post formats
 		array( 
 			'aside',   // title less blurb
 			'gallery', // gallery of images
@@ -69,7 +69,7 @@ function wp_bootstrap_theme_support() {
 			'audio',   // audio
 			'chat'     // chat transcript 
 		)
-	);	
+	);	*/
 	add_theme_support( 'menus' );            // wp menus
 	register_nav_menus(                      // wp3+ menus
 		array( 
