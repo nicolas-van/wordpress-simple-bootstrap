@@ -8,9 +8,9 @@
 
 get_header(); ?>
 			
-			<div id="content" class="clearfix row">
+			<div id="content" class="row">
 			
-				<div id="main" class="col-sm-8 clearfix" role="main">
+				<div id="main" class="col-sm-8 <?php echo (is_active_sidebar( 'sidebar1' ) ? '' : 'col-sm-push-2'); ?>" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

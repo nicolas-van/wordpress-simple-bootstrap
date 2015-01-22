@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row">
+			<div id="content" class="row">
 			
-				<div id="main" class="col-sm-12 clearfix" role="main">
+				<div id="main" class="col-sm-12" role="main">
 
 					<article id="post-not-found" class="clearfix">
 						

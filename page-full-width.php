@@ -6,9 +6,9 @@ Template Name: Full Width Page
 
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row">
+			<div id="content" class="row">
 			
-				<div id="main" class="col col-lg-12 clearfix" role="main">
+				<div id="main" class="col-lg-12" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
