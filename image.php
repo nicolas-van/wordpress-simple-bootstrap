@@ -40,12 +40,11 @@ get_header(); ?>
 							      
 							      </a>
 							</div>
-							
-							<!-- To display thumbnail of previous and next image in the photo gallery -->
-							<ul id="gallery-nav">
-								<li class="next pull-left"><?php next_image_link() ?></li>
-								<li class="previous pull-right"><?php previous_image_link() ?></li>
-							</ul>
+
+							<div class="nav-links">
+								<?php previous_image_link( false, '<span class="meta-nav"><span class="glyphicon glyphicon-arrow-left"></span></span>' ); ?>
+								<?php next_image_link( false, '<span class="meta-nav"><span class="glyphicon glyphicon-arrow-right"></span></span>' ); ?>
+							</div>
 							
 						</section> <!-- end article section -->
 						

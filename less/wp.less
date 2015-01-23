@@ -11,40 +11,6 @@
     }
 }
 
-/* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
-/* For modern browsers */
-.clearfix:before,
-.clearfix:after {
-    content:"";
-    display:table;
-}
-
-.clearfix:after {
-    clear:both;
-}
-
-/* For IE 6/7 (trigger hasLayout) */
-.clearfix {
-    zoom:1;
-}
-
-/* wp-specific classes */
-.wp-caption{
-    
-}
-
-.wp-caption-text{
-    
-}
-
-.sticky{
-    
-}
-
-.gallery-caption{
-    
-}
-
 /* layout */
 
 body{
@@ -374,11 +340,6 @@ video {
     margin-bottom: 18px;
 }
 
-#gallery-nav{
-    list-style-type: none;
-    margin-left: 0;
-}
-
 li.next a, li.previous a{
     position: relative;
 }
@@ -594,4 +555,13 @@ article header {
     .img-thumbnail();
     margin-bottom: 20px;
     width: 100%;
+}
+
+.gallery {
+    .clearfix();
+    .gallery-item {
+        float:left;
+        margin: 0 5px 5px 0;
+    }
+    margin-bottom: 5px;
 }

@@ -275,14 +275,6 @@ function save_homepage_meta( $post_id ) {
 }
 add_action( 'save_post', 'save_homepage_meta' );
 
-// Add thumbnail class to thumbnail links
-function add_class_attachment_link( $html ) {
-    $postid = get_the_ID();
-    $html = str_replace( '<a','<a class="thumbnail"',$html );
-    return $html;
-}
-add_filter( 'wp_get_attachment_link', 'add_class_attachment_link', 10, 1 );
-
 // Add lead class to first paragraph
 // deactivated because it was ugly
 /*function first_paragraph( $content ){
