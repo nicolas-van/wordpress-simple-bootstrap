@@ -67,23 +67,7 @@ function wp_bootstrap_register_sidebars() {
       'after_title' => '</h4>',
     ));
     
-    
-    /* 
-    to add more sidebars or widgetized areas, just copy
-    and edit the above sidebar code. In order to call 
-    your new sidebar just use the following code:
-    
-    Just change the name to whatever your new
-    sidebar's id is, for example:
-    
-    To call the sidebar in your template, you can just copy
-    the sidebar.php file and rename it to your sidebar's name.
-    So using the above example, it would be:
-    sidebar-sidebar2.php
-    
-    */
-} // don't remove this bracket!
-
+}
 // Display trackbacks/pings callback function
 function list_pings($comment, $args, $depth) {
        $GLOBALS['comment'] = $comment;
