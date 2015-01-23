@@ -343,5 +343,13 @@ msgstr "Galerie"
 msgid "Previously Uploaded"
 msgstr "Précédemment téléchargé"
 
+#: image.php:45
+msgid "Previous Image"
+msgstr "Image Précédente"
+
+#: image.php:46
+msgid "Next Image"
+msgstr "Image Suivante"
+
 #~ msgid "<h4>%s</h4>"
 #~ msgstr "<h4>%s</h4>"

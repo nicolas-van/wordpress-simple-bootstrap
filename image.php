@@ -42,8 +42,8 @@ get_header(); ?>
 							</div>
 
 							<div class="nav-links">
-								<?php previous_image_link( false, '<span class="meta-nav"><span class="glyphicon glyphicon-arrow-left"></span></span>' ); ?>
-								<?php next_image_link( false, '<span class="meta-nav"><span class="glyphicon glyphicon-arrow-right"></span></span>' ); ?>
+								<?php previous_image_link( false, '<span class="meta-nav">'.__( 'Previous Image', 'wpbootstrap' ).'</span>' ); ?>
+								<?php next_image_link( false, '<span class="meta-nav">'.__( 'Next Image', 'wpbootstrap' ).'</span>' ); ?>
 							</div>
 							
 						</section> <!-- end article section -->
