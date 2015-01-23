@@ -310,43 +310,15 @@ video {
     }
 }
 
-/* change default form padding for search */
-
-.widget_search form{
-    padding-left: 0;
-}
-
 /* calendar widget */
 
-#calendar_wrap{
-    border: 1px solid #ddd;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    padding: 5px;
-}
-
-#wp-calendar{
-    width: 100%;
-}
-
-#wp-calendar caption{
-    font-weight: bold;
-    padding: 8px;
-}
-
-#wp-calendar tr{
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-
-#wp-calendar tr:last-child{
-    border-bottom: none;
-}
-
-#wp-calendar td{
-    text-align: center;
-    padding: 8px 0;
+.widget_calendar {
+    table {
+        .table();
+        caption {
+            font-weight: bold;
+        }
+    }
 }
 
 blockquote.pull-left{
