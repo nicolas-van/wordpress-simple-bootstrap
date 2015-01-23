@@ -136,7 +136,7 @@ ul.nav {
     margin-bottom: 20px;
 }
 
-#main article.post {
+#main article {
     margin-bottom: 18px;
     border-bottom: 1px solid @hr-border;
     padding: 0 0 9px;
@@ -146,7 +146,7 @@ ul.nav {
     }
 }
 
-#main article.post footer{
+#main article footer{
     border-top: none;
     margin-top: 0;
     padding-top: 0;
@@ -154,15 +154,11 @@ ul.nav {
     min-height: 20px;
 }
 
-#main article.post footer a.edit-post{
+#main article footer a.edit-post{
     position: absolute;
     right: 0;
     top: 0;
     display: none;
-}
-
-.post:hover a.edit-post{
-    display: inline;
 }
 
 p.tags{
@@ -174,32 +170,24 @@ div[id*='attachment_']{
     height: 100%;
 }
 
-#main .hero-unit img{
-    margin-bottom: 1em;
-}
+#main article section img {
+    .img-responsive();
+    .img-thumbnail();
 
-#main article.post img{
-    max-width: 100%;
-}
+    &.alignleft {
+        .pull-left();
+        margin-right: 10px;
+    }
 
-img.alignleft{
-    margin-right: 10px;
-    float: left;
-}
+    &.alignright {
+        .pull-right();
+        margin-left: 10px;
+    }
 
-img.alignright{
-    margin-left: 10px;
-    float: right;
-}
-
-img.aligncenter{
-    display: block;
-    margin: 0 auto;
-}
-
-.archive #main .post h3{
-    line-height: 24px;
-    margin-bottom: 10px;
+    &.aligncenter {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 video {
@@ -240,19 +228,6 @@ video {
 
 .carousel-caption p{
     display: none;
-}
-
-.page-template-page-homepage-php #main article.post {
-    border-bottom: none;
-}
-
-.page-template-page-homepage-php .hero-unit,
-.blog .hero-unit{
-    padding: 1em;
-}
-
-.hero-unit h1 {
-    font-size: 3em;
 }
 
 /* comments */
@@ -594,7 +569,7 @@ blockquote.pull-left{
     }
 }
 
-article.post header {
+article header {
     .link-without-style();
 }
 
