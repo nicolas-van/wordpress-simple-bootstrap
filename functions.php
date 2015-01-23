@@ -11,9 +11,6 @@ sidebars, comments, ect.
 // Get Bones Core Up & Running!
 require_once('library/bones.php');            // core functions (don't remove)
 
-// Shortcodes
-require_once('library/shortcodes.php');
-
 // Admin Functions (commented out by default)
 // require_once('library/admin.php');         // custom admin functions
 
