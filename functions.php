@@ -301,8 +301,6 @@ class Bootstrap_walker extends Walker_Nav_Menu{
   }        
 }
 
-add_editor_style('editor-style.css');
-
 // Add Twitter Bootstrap's standard 'active' class name to the active nav link item
 add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 
