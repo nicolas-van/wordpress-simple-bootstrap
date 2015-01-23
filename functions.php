@@ -15,7 +15,8 @@ require_once('library/bones.php');            // core functions (don't remove)
 // require_once('library/admin.php');         // custom admin functions
 
 // Set content width
-if ( ! isset( $content_width ) ) $content_width = 580;
+if ( ! isset( $content_width ) )
+  $content_width = 750;
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
