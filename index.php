@@ -6,7 +6,7 @@
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 						
 						<header>
 							
@@ -18,7 +18,7 @@
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content clearfix">
+						<section class="post_content">
 							<?php the_content( __("Read more &raquo;","wpbootstrap") ); ?>
 						</section> <!-- end article section -->
 						

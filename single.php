@@ -6,7 +6,7 @@
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
 							
@@ -18,7 +18,7 @@
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content clearfix" itemprop="articleBody">
+						<section class="post_content" itemprop="articleBody">
 							<?php the_content(); ?>
 							
 							<?php wp_link_pages(); ?>

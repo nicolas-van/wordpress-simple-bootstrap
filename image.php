@@ -14,7 +14,7 @@ get_header(); ?>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header> 
 							
@@ -25,7 +25,7 @@ get_header(); ?>
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content clearfix" itemprop="articleBody">
+						<section class="post_content" itemprop="articleBody">
 							
 							<!-- To display current image in the photo gallery -->
 							<div class="attachment-img">
@@ -42,7 +42,7 @@ get_header(); ?>
 							</div>
 							
 							<!-- To display thumbnail of previous and next image in the photo gallery -->
-							<ul id="gallery-nav" class="clearfix">
+							<ul id="gallery-nav">
 								<li class="next pull-left"><?php next_image_link() ?></li>
 								<li class="previous pull-right"><?php previous_image_link() ?></li>
 							</ul>

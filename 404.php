@@ -4,7 +4,7 @@
 			
 				<div id="main" class="col-sm-12" role="main">
 
-					<article id="post-not-found" class="clearfix">
+					<article id="post-not-found">
 						
 						<header>
 

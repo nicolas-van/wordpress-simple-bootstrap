@@ -170,23 +170,26 @@ div[id*='attachment_']{
     height: 100%;
 }
 
-#main article section img {
-    .img-responsive();
-    .img-thumbnail();
+#main article section {
+    .clearfix();
+    img {
+        .img-responsive();
+        .img-thumbnail();
 
-    &.alignleft {
-        .pull-left();
-        margin-right: 10px;
-    }
+        &.alignleft {
+            .pull-left();
+            margin-right: 10px;
+        }
 
-    &.alignright {
-        .pull-right();
-        margin-left: 10px;
-    }
+        &.alignright {
+            .pull-right();
+            margin-left: 10px;
+        }
 
-    &.aligncenter {
-        display: block;
-        margin: 0 auto;
+        &.aligncenter {
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
 

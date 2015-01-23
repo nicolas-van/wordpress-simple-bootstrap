@@ -96,7 +96,7 @@ function wp_bootstrap_footer_links() {
     	array(
     		'menu' => 'footer_links', /* menu name */
     		'theme_location' => 'footer_links', /* where in the theme it's assigned */
-    		'container_class' => 'footer-links clearfix', /* container class */
+    		'container_class' => 'footer-links', /* container class */
     		'fallback_cb' => 'wp_bootstrap_footer_links_fallback' /* menu fallback */
     	)
 	);
