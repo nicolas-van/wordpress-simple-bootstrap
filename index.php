@@ -23,7 +23,6 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-			
 							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
 							
 						</footer> <!-- end article footer -->
