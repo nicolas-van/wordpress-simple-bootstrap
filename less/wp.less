@@ -107,6 +107,7 @@ ul.nav {
     }
 
     header {
+        .link-without-style();
         .meta {
             .link-without-style();
             margin-bottom: 20px;
@@ -135,7 +136,13 @@ ul.nav {
             }
         }
     }
+}
 
+.tags {
+    a {
+        .label;
+        .label-default;
+    }
 }
 
 video {
@@ -296,13 +303,6 @@ video {
     margin-bottom: 9px;
 }
 
-.tags {
-    a {
-        .label;
-        .label-default;
-    }
-}
-
 .tagcloud {
     a {
         .label;
@@ -325,73 +325,6 @@ blockquote.pull-left{
     padding-right: 15px;
 }
 
-@media only screen and (min-width: 768px) {
-    .carousel-caption p{
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 980px) {
-    body{
-        padding-top: 60px;
-    }
-    
-    .container-fluid{
-        max-width: 970px;
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    
-    #inner-footer{
-        padding: 0;
-    }
-    
-    #content{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-    .topbar-inner{
-        padding: 0;
-    }
-    
-    .topbar form.pull-right {
-        float: right;
-    }
-    
-    .navbar-search{
-        padding-left: 0;
-    }
-    
-    .blog .hero-unit{
-        margin-top: 10px;
-    }
-    
-    .page-template-page-homepage-php .hero-unit,
-    .blog .hero-unit{
-        padding: 60px;
-    }
-    
-    .hero-unit h1 {
-        font-size: 60px;
-    }
-    
-    /* hide edit comment button and show on hover on desktop version */
-    .edit-comment{
-        display: none;
-    }
-    
-    .vcard:hover .edit-comment{
-        display: inline-block;
-    }
-    
-    .comment .vcard .comment-text{
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
 .nav-links {
     .link-without-style();
     a {
@@ -405,10 +338,6 @@ blockquote.pull-left{
         border-top: 1px solid @hr-border;
         padding: 15px 0;
     }
-}
-
-article header {
-    .link-without-style();
 }
 
 .vertical-nav {
