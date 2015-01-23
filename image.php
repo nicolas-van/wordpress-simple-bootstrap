@@ -78,66 +78,7 @@ get_header(); ?>
 			
 				</div> <!-- end #main -->
 				
-				<div id="sidebar1" class="col col-lg-4 fluid-sidebar sidebar" role="complementary">
-				
-					<?php if ( !empty($post->post_excerpt) ) { ?> 
-					<p class="alert alert-block success"><?php echo get_the_excerpt(); ?></p>
-					<?php } ?>
-								
-					<!-- Using WordPress functions to retrieve the extracted EXIF information from database -->
-					<div class="well">
-					
-						<h3><?php _e("Image metadata","wpbootstrap"); ?></h3>
-					
-					   <?php
-					      $imgmeta = wp_get_attachment_metadata( $id );
-					
-					// Convert the shutter speed retrieve from database to fraction
-							if (($imgmeta['shutter_speed']) != 0) {
-								if ((1 / $imgmeta['image_meta']['shutter_speed']) > 1)
-								{
-									if ((number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1)) == 1.3
-									or number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1) == 1.5
-									or number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1) == 1.6
-									or number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1) == 2.5)
-									{
-										$pshutter = "1/" . number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1, '.', '') . " second";
-									} else {
-										$pshutter = "1/" . number_format((1 / $imgmeta['image_meta']['shutter_speed']), 0, '.', '') . " second";
-									}
-									} else {
-										$pshutter = $imgmeta['image_meta']['shutter_speed'] . " seconds";
-									}
-								}
-							else {
-								echo("Shutter Speed Unavailable");
-							}
-					
-					// Start to display EXIF and IPTC data of digital photograph
-					       if ( $imgmeta['image_meta']['created_timestamp'] ) { 
-					           echo __("Date Taken","wpbootstrap") . ": " . date("d-M-Y H:i:s", $imgmeta['image_meta']['created_timestamp'])."<br />"; }
-					       if ( $imgmeta['image_meta']['copyright'] ) { 
-					           echo __("Copyright","wpbootstrap") . ": " . $imgmeta['image_meta']['copyright']."<br />"; }
-					       if ( $imgmeta['image_meta']['credit'] ) { 
-					           echo __("Credit","wpbootstrap") . ": " . $imgmeta['image_meta']['credit']."<br />"; }
-					       if ( $imgmeta['image_meta']['title'] ) { 
-					           echo __("Title","wpbootstrap") . ": " . $imgmeta['image_meta']['title']."<br />"; }
-					       if ( $imgmeta['image_meta']['caption'] ) { 
-					           echo __("Caption","wpbootstrap") . ": " . $imgmeta['image_meta']['caption']."<br />"; }
-					       if ( $imgmeta['image_meta']['camera'] ) { 
-					           echo __("Camera","wpbootstrap") . ": " . $imgmeta['image_meta']['camera']."<br />"; }
-					       if ( $imgmeta['image_meta']['focal_length'] ) { 
-					           echo __("Focal Length","wpbootstrap") . ": " . $imgmeta['image_meta']['focal_length']."mm<br />"; }
-					       if ( $imgmeta['image_meta']['aperture'] ) { 
-					           echo __("Aperture","wpbootstrap") . ": f/" . $imgmeta['image_meta']['aperture']."<br />"; }
-					       if ( $imgmeta['image_meta']['iso'] ) { 
-					           echo __("ISO","wpbootstrap") . ": " . $imgmeta['image_meta']['iso']."<br />"; }
-					       if ( $pshutter ) { 
-					           echo __("Shutter Speed","wpbootstrap") . ": " . $pshutter . "<br />"; }
-					   ?>
-					</div>
-					
-				</div>
+				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 
