@@ -26,7 +26,16 @@
 				</div>
 
 				<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
-					<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+					<?php
+					    wp_nav_menu(
+					        array( 
+					            'theme_location' => 'main_nav', /* where in the theme it's assigned */
+					            'menu' => 'main_nav', /* menu name */
+					            'menu_class' => 'nav navbar-nav',
+					            'container' => false, /* container class */
+					        )
+					    );
+					?>
 
 					<?php //if(of_get_option('search_bar', '1')) {?>
 					<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
