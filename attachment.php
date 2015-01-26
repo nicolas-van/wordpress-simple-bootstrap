@@ -10,7 +10,7 @@
 						
 						<header>
 							
-							<div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="page-header"><h1 itemprop="headline"><?php the_title(); ?></h1></div>
 							
 							<?php display_post_meta() ?>
 						
