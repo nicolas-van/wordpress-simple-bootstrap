@@ -4,6 +4,10 @@
         		
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
                 <?php endif; ?>
+
+                <div class="col-md-12 text-center">
+                    <p>Created with Wordpress</p>
+                </div>
 				
 			</footer> <!-- end footer -->
 		
