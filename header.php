@@ -27,14 +27,7 @@
 
 				<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
 					<?php
-					    wp_nav_menu(
-					        array( 
-					            'theme_location' => 'main_nav', /* where in the theme it's assigned */
-					            'menu' => 'main_nav', /* menu name */
-					            'menu_class' => 'nav navbar-nav',
-					            'container' => false, /* container class */
-					        )
-					    );
+					    display_main_menu();
 					?>
 
 					<?php //if(of_get_option('search_bar', '1')) {?>
