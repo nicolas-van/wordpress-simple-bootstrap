@@ -40,17 +40,19 @@ get_header(); ?>
 							      
 							      </a>
 							</div>
-
-							<div class="nav-links">
-								<?php previous_image_link( false, '<span class="meta-nav">'.__( 'Previous Image', 'wpbootstrap' ).'</span>' ); ?>
-								<?php next_image_link( false, '<span class="meta-nav">'.__( 'Next Image', 'wpbootstrap' ).'</span>' ); ?>
-							</div>
 							
 						</section> <!-- end article section -->
 						
 						<footer>
-			
-							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
+							
+							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
+
+							<nav>
+							  	<ul class="pager">
+							    	<li class="previous"><?php previous_image_link( false, esc_html(__( 'Previous Image', 'wpbootstrap'))); ?></li>
+							    	<li class="next"><?php next_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap' ))); ?></li>
+							  	</ul>
+							</nav>
 							
 						</footer> <!-- end article footer -->
 					

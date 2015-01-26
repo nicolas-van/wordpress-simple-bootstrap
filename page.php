@@ -22,7 +22,7 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
+							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->

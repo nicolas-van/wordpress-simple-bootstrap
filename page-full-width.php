@@ -29,7 +29,7 @@ Template Name: Full Width Page
 						
 						<footer>
 			
-							<p><?php the_tags('<span class="tags">', ' ', '</span>'); ?></p>
+							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
 							
 						</footer> <!-- end article footer -->
 					
