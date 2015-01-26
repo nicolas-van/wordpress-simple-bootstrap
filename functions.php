@@ -8,25 +8,62 @@ just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
-// Get Bones Core Up & Running!
-require_once('library/bones.php');            // core functions (don't remove)
+// registration of the translations
+load_theme_textdomain( 'wpbootstrap', TEMPLATEPATH.'/languages' );
 
-// Admin Functions (commented out by default)
-// require_once('library/admin.php');         // custom admin functions
+// Declaration of theme supported features
+function wp_bootstrap_theme_support() {
+    add_theme_support( 'html5', array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption'
+    ));
+    add_theme_support('post-thumbnails');      // wp thumbnails (sizes handled in functions.php)
+    set_post_thumbnail_size(125, 125, true);   // default thumb size
+    add_theme_support('automatic-feed-links'); // rss thingy
+    add_theme_support( 'menus' );            // wp menus
+    register_nav_menus(                      // wp3+ menus
+        array( 
+            'main_nav' => 'The Main Menu',   // main nav in header
+        )
+    );
+}
+add_action('after_setup_theme','wp_bootstrap_theme_support');
+
+// enqueue styles
+if( !function_exists("theme_styles") ) {  
+    function theme_styles() { 
+        // For child themes
+        wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null, 'all' );
+        wp_enqueue_style( 'wpbs-style' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'theme_styles' );
+
+// enqueue javascript
+if( !function_exists( "theme_js" ) ) {  
+    function theme_js(){
+        wp_register_script( 'bower-libs', 
+            get_template_directory_uri() . '/app.min.js', 
+            array('jquery'), 
+            null );
+        wp_enqueue_script('bower-libs');
+    }
+}
+add_action( 'wp_enqueue_scripts', 'theme_js' );
+
 
 // Set content width
 if ( ! isset( $content_width ) )
     $content_width = 750;
 
-/************* THUMBNAIL SIZE OPTIONS *************/
-
 // Thumbnail sizes
 add_image_size( 'wpbs-featured-small', 780);
 add_image_size( 'wpbs-featured-big', 1170);
 
-/************* ACTIVE SIDEBARS ********************/
-
-// Sidebars & Widgetizes Areas
+// Sidebar and Footer declaration
 function wp_bootstrap_register_sidebars() {
     register_sidebar(array(
     	'id' => 'sidebar1',
@@ -48,6 +85,8 @@ function wp_bootstrap_register_sidebars() {
     ));
     
 }
+add_action( 'widgets_init', 'wp_bootstrap_register_sidebars' );
+
 
 // Menu output mods
 class Bootstrap_walker extends Walker_Nav_Menu{
@@ -114,8 +153,6 @@ class Bootstrap_walker extends Walker_Nav_Menu{
 }
 
 // Add Twitter Bootstrap's standard 'active' class name to the active nav link item
-add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
-
 function add_active_class($classes, $item) {
 	if( $item->menu_item_parent == 0 && in_array('current-menu-item', $classes) ) {
         $classes[] = "active";
@@ -123,31 +160,28 @@ function add_active_class($classes, $item) {
   
     return $classes;
 }
+add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 
-// enqueue styles
-if( !function_exists("theme_styles") ) {  
-    function theme_styles() { 
-        // For child themes
-        wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null, 'all' );
-        wp_enqueue_style( 'wpbs-style' );
-    }
+// display the menu
+function wp_bootstrap_main_nav() {
+    wp_nav_menu( 
+        array( 
+            'menu' => 'main_nav', /* menu name */
+            'menu_class' => 'nav navbar-nav',
+            'theme_location' => 'main_nav', /* where in the theme it's assigned */
+            'container' => 'false', /* container class */
+            'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
+            // 'depth' => '2',  suppress lower levels for now 
+            'walker' => new Bootstrap_walker()
+        )
+    );
 }
-add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
-// enqueue javascript
-if( !function_exists( "theme_js" ) ) {  
-  function theme_js(){
-  
-    wp_register_script( 'bower-libs', 
-        get_template_directory_uri() . '/app.min.js', 
-        array('jquery'), 
-        null );
-  
-    wp_enqueue_script('bower-libs');
-    
-  }
+// this is the fallback for header menu
+function wp_bootstrap_main_nav_fallback() { 
+    // Figure out how to make this output bootstrap-friendly html
+    //wp_page_menu( 'show_home=Home&menu_class=nav' ); 
 }
-add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 /*
   A function used in multiple places to generate the metadata of a post.
@@ -180,6 +214,64 @@ function display_post_meta() {
     </ul>
 
 <?php
+}
+
+function page_navi($before = '', $after = '') {
+    global $wpdb, $wp_query;
+    $request = $wp_query->request;
+    $posts_per_page = intval(get_query_var('posts_per_page'));
+    $paged = intval(get_query_var('paged'));
+    $numposts = $wp_query->found_posts;
+    $max_page = $wp_query->max_num_pages;
+    if ( $numposts <= $posts_per_page ) { return; }
+    if(empty($paged) || $paged == 0) {
+        $paged = 1;
+    }
+    $pages_to_show = 7;
+    $pages_to_show_minus_1 = $pages_to_show-1;
+    $half_page_start = floor($pages_to_show_minus_1/2);
+    $half_page_end = ceil($pages_to_show_minus_1/2);
+    $start_page = $paged - $half_page_start;
+    if($start_page <= 0) {
+        $start_page = 1;
+    }
+    $end_page = $paged + $half_page_end;
+    if(($end_page - $start_page) != $pages_to_show_minus_1) {
+        $end_page = $start_page + $pages_to_show_minus_1;
+    }
+    if($end_page > $max_page) {
+        $start_page = $max_page - $pages_to_show_minus_1;
+        $end_page = $max_page;
+    }
+    if($start_page <= 0) {
+        $start_page = 1;
+    }
+        
+    echo $before.'<ul class="pagination">'."";
+    if ($paged > 1) {
+        $first_page_text = "&laquo";
+        echo '<li class="prev"><a href="'.get_pagenum_link().'" title="First">'.$first_page_text.'</a></li>';
+    }
+        
+    $prevposts = get_previous_posts_link('&larr; Previous');
+    if($prevposts) { echo '<li>' . $prevposts  . '</li>'; }
+    else { echo '<li class="disabled"><a href="#">&larr; Previous</a></li>'; }
+    
+    for($i = $start_page; $i  <= $end_page; $i++) {
+        if($i == $paged) {
+            echo '<li class="active"><a href="#">'.$i.'</a></li>';
+        } else {
+            echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
+        }
+    }
+    echo '<li class="">';
+    next_posts_link('Next &rarr;');
+    echo '</li>';
+    if ($end_page < $max_page) {
+        $last_page_text = "&raquo;";
+        echo '<li class="next"><a href="'.get_pagenum_link($max_page).'" title="Last">'.$last_page_text.'</a></li>';
+    }
+    echo '</ul>'.$after."";
 }
 
 ?>
