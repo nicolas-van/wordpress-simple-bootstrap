@@ -378,12 +378,4 @@ function display_post_meta() {
 <?php
 }
 
-// remove the standard shortcode
-remove_shortcode('gallery', 'gallery_shortcode');
-add_shortcode('gallery', 'gallery_shortcode_tbs');
-function gallery_shortcode_tbs($attr) {
-    $tmp = gallery_shortcode($attr);
-    return preg_replace('/figure class=.gallery-item./', 'figure class="gallery-item col-xs-6 col-md-3"', $tmp);
-}
-
 ?>
