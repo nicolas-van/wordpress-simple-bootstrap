@@ -160,6 +160,8 @@ function add_active_class($classes, $item) {
 }
 add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 
+// display the main menu bootstrap-style
+// this menu is limited to 2 levels (that's a bootstrap limitation)
 function display_main_menu() {
     wp_nav_menu(
         array( 
