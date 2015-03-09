@@ -12,7 +12,7 @@
 	
 	<body <?php body_class(); ?>>
 				
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
       
 				<div class="navbar-header">
