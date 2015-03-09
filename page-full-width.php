@@ -12,30 +12,7 @@ Template Name: Full Width Page
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class("block"); ?> role="article">
-						
-						<header>
-							
-							<div class="article-header"><h1><?php the_title(); ?></h1></div>
-
-							<?php if (has_post_thumbnail()) { ?>
-							<div class="featured-image">
-								<?php the_post_thumbnail('wpbs-featured-big'); ?>
-							</div>
-							<?php } ?>
-						
-						</header>
-					
-						<section class="post_content">
-							<?php the_content(); ?>
-					
-						</section>
-						
-						<footer>
-							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer>
-					
-					</article>
+					<?php display_post(false); ?>
 					
 					<?php comments_template(); ?>
 					

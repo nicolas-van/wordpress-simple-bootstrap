@@ -3,34 +3,16 @@
 			<div id="content" class="row">
 			
 				<div id="main" class="col-sm-8 <?php echo (is_active_sidebar( 'sidebar1' ) ? '' : 'col-lg-push-2'); ?>" role="main">
-				
-					<div class="article-header"><h1><span><?php _e("Search Results for","wpbootstrap"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
+					
+					<div class="block block-title">
+						<h1><span><?php _e("Search Results for","wpbootstrap"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+					</div>
 
 					<?php if (have_posts()) : ?>
 
 					<?php while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class("block"); ?> role="article">
-						
-						<header>
-							
-							<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							
-							<?php display_post_meta() ?>
-						
-						</header>
-					
-						<section class="post_content">
-							<?php the_excerpt('<span class="read-more">' . __("Read more on","wpbootstrap") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>
-					
-						</section>
-						
-						<footer>
-					
-							
-						</footer>
-					
-					</article>
+					<?php display_post(true); ?>
 					
 					<?php endwhile; ?>	
 					

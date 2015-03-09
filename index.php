@@ -8,31 +8,7 @@
 
 					<?php while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class("block"); ?> role="article">
-						
-						<header>
-							
-							<div class="article-header"><h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
-
-							<?php if (has_post_thumbnail()) { ?>
-							<div class="featured-image">
-								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('wpbs-featured-small'); ?></a>
-							</div>
-							<?php } ?>
-							
-							<?php display_post_meta() ?>
-						
-						</header>
-					
-						<section class="post_content">
-							<?php the_content( __("Read more &raquo;","wpbootstrap") ); ?>
-						</section>
-						
-						<footer>
-							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer>
-					
-					</article>
+					<?php display_post(true); ?>
 					
 					<?php endwhile; ?>	
 					

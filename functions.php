@@ -222,4 +222,53 @@ function page_navi() {
     <?php
 }
 
+function display_post($multiple_on_page) { ?>
+
+    <article id="post-<?php the_ID(); ?>" <?php post_class("block"); ?> role="article">
+        
+        <header>
+            
+            <?php if ($multiple_on_page) : ?>
+            <div class="article-header">
+                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+            </div>
+            <?php else: ?>
+            <div class="article-header">
+                <h1><?php the_title(); ?></h1>
+            </div>
+            <?php endif ?>
+
+            <?php if (has_post_thumbnail()) { ?>
+            <div class="featured-image">
+                <?php if ($multiple_on_page) : ?>
+                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('wpbs-featured-small'); ?></a>
+                <?php else: ?>
+                <?php the_post_thumbnail('wpbs-featured-small'); ?>
+                <?php endif ?>
+            </div>
+            <?php } ?>
+
+            <?php display_post_meta() ?>
+        
+        </header>
+    
+        <section class="post_content">
+            <?php
+            if ($multiple_on_page) {
+                the_excerpt();
+            } else {
+                the_content();
+                wp_link_pages();
+            }
+            ?>
+        </section>
+        
+        <footer>
+            <?php the_tags('<p class="tags">', ' ', '</p>'); ?>
+        </footer>
+    
+    </article>
+
+<?php }
+
 ?>

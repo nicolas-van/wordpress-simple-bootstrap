@@ -6,27 +6,7 @@
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('block'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-						<header>
-							
-							<div class="article-header"><h1 itemprop="headline"><?php the_title(); ?></h1></div>
-							
-							<?php display_post_meta() ?>
-						
-						</header>
-					
-						<section class="post_content" itemprop="articleBody">
-							
-							<?php the_content(); ?>
-							
-						</section>
-						
-						<footer>
-							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer>
-					
-					</article>
+					<?php display_post(false); ?>
 					
 					<?php comments_template('', true); ?>
 					
