@@ -23,7 +23,7 @@ get_header(); ?>
 							
 							<?php display_post_meta() ?>
 						
-						</header> <!-- end article header -->
+						</header>
 					
 						<section class="post_content" itemprop="articleBody">
 							
@@ -41,11 +41,11 @@ get_header(); ?>
 							      </a>
 							</div>
 							
-						</section> <!-- end article section -->
+						</section>
 						
 						<footer>
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer> <!-- end article footer -->
+						</footer>
 
 						<nav>
 						  	<ul class="pager">
@@ -54,7 +54,7 @@ get_header(); ?>
 						  	</ul>
 						</nav>
 					
-					</article> <!-- end article -->
+					</article>
 					
 					<?php comments_template(); ?>
 					
@@ -75,10 +75,10 @@ get_header(); ?>
 					
 					<?php endif; ?>
 			
-				</div> <!-- end #main -->
+				</div>
 				
 				<?php get_sidebar(); // sidebar 1 ?>
     
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

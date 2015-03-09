@@ -22,17 +22,17 @@
 							
 							<?php display_post_meta() ?>
 						
-						</header> <!-- end article header -->
+						</header>
 					
 						<section class="post_content">
 							<?php the_content( __("Read more &raquo;","wpbootstrap") ); ?>
-						</section> <!-- end article section -->
+						</section>
 						
 						<footer>
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer> <!-- end article footer -->
+						</footer>
 					
-					</article> <!-- end article -->
+					</article>
 					
 					<?php endwhile; ?>	
 					
@@ -53,10 +53,10 @@
 					
 					<?php endif; ?>
 			
-				</div> <!-- end #main -->
+				</div>
     
 				<?php get_sidebar(); // sidebar 1 ?>
     
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

@@ -24,18 +24,18 @@ Template Name: Full Width Page
 							</div>
 							<?php } ?>
 						
-						</header> <!-- end article header -->
+						</header>
 					
 						<section class="post_content">
 							<?php the_content(); ?>
 					
-						</section> <!-- end article section -->
+						</section>
 						
 						<footer>
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer> <!-- end article footer -->
+						</footer>
 					
-					</article> <!-- end article -->
+					</article>
 					
 					<?php comments_template(); ?>
 					
@@ -56,10 +56,10 @@ Template Name: Full Width Page
 					
 					<?php endif; ?>
 			
-				</div> <!-- end #main -->
+				</div>
     
 				<?php //get_sidebar(); // sidebar 1 ?>
     
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

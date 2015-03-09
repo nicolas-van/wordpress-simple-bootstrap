@@ -9,9 +9,9 @@
                     </div>
                 </div>
 				
-			</footer> <!-- end footer -->
+			</footer>
 		
-		</div> <!-- end #container -->
+		</div>
 
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
