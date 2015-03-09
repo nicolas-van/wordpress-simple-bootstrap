@@ -23,10 +23,10 @@ function wp_bootstrap_theme_support() {
     add_theme_support('post-thumbnails');      // wp thumbnails (sizes handled in functions.php)
     set_post_thumbnail_size(125, 125, true);   // default thumb size
     add_theme_support('automatic-feed-links'); // rss thingy
-    add_theme_support( 'menus' );            // wp menus
+    add_theme_support('menus');            // wp menus
     register_nav_menus(                      // wp3+ menus
         array( 
-            'main_nav' => 'The Main Menu',   // main nav in header
+            'main_nav' => 'Main Menu',   // main nav in header
         )
     );
 }
@@ -163,16 +163,18 @@ add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 // display the main menu bootstrap-style
 // this menu is limited to 2 levels (that's a bootstrap limitation)
 function display_main_menu() {
-    wp_nav_menu(
-        array( 
-            'theme_location' => 'main_nav', /* where in the theme it's assigned */
-            'menu' => 'main_nav', /* menu name */
-            'menu_class' => 'nav navbar-nav',
-            'container' => false, /* container class */
-            'depth' => 2,
-            'walker' => new Bootstrap_walker(),
-        )
-    );
+    if ( has_nav_menu("main_nav") ) {
+        wp_nav_menu(
+            array( 
+                'theme_location' => 'main_nav', /* where in the theme it's assigned */
+                'menu' => 'main_nav', /* menu name */
+                'menu_class' => 'nav navbar-nav',
+                'container' => false, /* container class */
+                'depth' => 2,
+                'walker' => new Bootstrap_walker(),
+            )
+        );
+    }
 }
 
 /*
