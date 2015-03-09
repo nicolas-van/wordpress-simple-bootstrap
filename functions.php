@@ -213,8 +213,8 @@ function page_navi() {
     <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
         <nav class="block">
             <ul class="pager pager-unspaced">
-                <li class="previous"><?php previous_posts_link(esc_html(__('Newer posts'))); ?></li>
-                <li class="next"><?php next_posts_link(esc_html(__('Older posts'))); ?></li>
+                <li class="previous"><?php previous_posts_link('<span class="glyphicon glyphicon-arrow-left"></span> '.esc_html(__('Newer posts'))); ?></li>
+                <li class="next"><?php next_posts_link(esc_html(__('Older posts')).' <span class="glyphicon glyphicon-arrow-right"></span>'); ?></li>
             </ul>
         </nav>
     <?php } ?>

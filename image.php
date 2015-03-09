@@ -49,8 +49,8 @@ get_header(); ?>
 
 						<nav>
 						  	<ul class="pager">
-						    	<li class="previous"><?php next_image_link( false, esc_html(__( 'Previous Image', 'wpbootstrap' ))); ?></li>
-						    	<li class="next"><?php previous_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap'))); ?></li>
+						    	<li class="previous"><?php next_image_link( false, '<span class="glyphicon glyphicon-arrow-left"></span> '.esc_html(__( 'Previous Image', 'wpbootstrap' ))); ?></li>
+						    	<li class="next"><?php previous_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap')).' <span class="glyphicon glyphicon-arrow-right"></span>'); ?></li>
 						  	</ul>
 						</nav>
 					
