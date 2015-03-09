@@ -18,18 +18,18 @@
 							</div>
 							<?php } ?>
 						
-						</header>/
+						</header> <!-- end article header -->
 					
 						<section class="post_content" itemprop="articleBody">
 							<?php the_content(); ?>
 					
-						</section>/
+						</section> <!-- end article section -->
 						
 						<footer>
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-						</footer>/
+						</footer> <!-- end article footer -->
 					
-					</article>/
+					</article> <!-- end article -->
 					
 					<?php comments_template('',true); ?>
 					
@@ -50,10 +50,10 @@
 					
 					<?php endif; ?>
 			
-				</div>/
+				</div> <!-- end #main -->
     
 				<?php get_sidebar(); // sidebar 1 ?>
     
-			</div>/
+			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
