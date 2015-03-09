@@ -16,7 +16,7 @@ Template Name: Full Width Page
 						
 						<header>
 							
-							<div class="page-header"><h1><?php the_title(); ?></h1></div>
+							<div class="article-header"><h1><?php the_title(); ?></h1></div>
 						
 							<?php the_post_thumbnail('wpbs-featured-big'); ?>
 						
@@ -28,9 +28,7 @@ Template Name: Full Width Page
 						</section> <!-- end article section -->
 						
 						<footer>
-			
-							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
-							
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->

@@ -1,6 +1,5 @@
 			
             <footer id="inner-footer" class="row vertical-nav" role="contentinfo">
-                <hr />
         		
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
                 <?php endif; ?>

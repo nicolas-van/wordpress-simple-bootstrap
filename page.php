@@ -10,7 +10,7 @@
 						
 						<header>
 							
-							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="article-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
 						
 							<?php the_post_thumbnail('wpbs-featured-small'); ?>
 						
@@ -22,7 +22,7 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->

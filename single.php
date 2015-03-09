@@ -10,7 +10,7 @@
 						
 						<header>
 							
-							<div class="page-header"><h1 itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="article-header"><h1 itemprop="headline"><?php the_title(); ?></h1></div>
 						
 							<?php the_post_thumbnail('wpbs-featured-small'); ?>
 							
@@ -26,21 +26,19 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-			
-							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
-
-							<nav>
-								<ul class="pager">
-									<li class="previous"><?php previous_post_link( '%link', esc_html(__( 'Previous Post')) ); ?></li>
-									<li class="next"><?php next_post_link( '%link', esc_html(__( 'Next Post')) ); ?></li>
-								</ul>
-							</nav>
-							
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
 					<?php comments_template('',true); ?>
+					
+					<nav>
+						<ul class="pager">
+							<li class="previous"><?php previous_post_link( '%link', esc_html(__( 'Previous Post')) ); ?></li>
+							<li class="next"><?php next_post_link( '%link', esc_html(__( 'Next Post')) ); ?></li>
+						</ul>
+					</nav>
 					
 					<?php endwhile; ?>			
 					

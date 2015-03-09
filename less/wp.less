@@ -1,4 +1,10 @@
-/* All the styles that you would normally find in the style.css */
+/*
+    This file defines a lot of style necessary to make Wordpress work
+    correctly.
+
+    It is not recommended to edit it unless you know exactly what you
+    are doing.
+*/
 
 .link-without-style() {
     a {
@@ -11,16 +17,17 @@
     }
 }
 
+.block() {
+    background-color: @block-bg;
+    border: @block-border;
+    padding: @block-padding @block-padding (@block-padding - @padding-base-vertical) @block-padding;
+    margin-bottom: 30px;
+}
+
 /* post styling */
 
 #main>article {
-    margin-bottom: 18px;
-    border-bottom: 1px solid @hr-border;
-    padding: 0 0 9px;
-    
-    &:last-of-type {
-        border-bottom: 0px;
-    }
+    .block();
 
     header {
         .link-without-style();
@@ -67,6 +74,10 @@
 }
 
 /* comments */
+
+#comments {
+    .block();
+}
 
 .commentlist {
     .list-unstyled();
@@ -184,6 +195,9 @@
 
 .widget {
     margin-bottom: 38px;
+    &:last-of-type {
+        margin-bottom: 18px;
+    }
 }
 
 .widgettitle {
@@ -227,6 +241,10 @@
     }
 }
 
+.sidebar-container {
+    .block();
+}
+
 /* featured image */
 
 .wp-post-image {
@@ -244,4 +262,12 @@
         .make-md-column(3);
         padding-bottom: 15px;
     }
+}
+
+/* a style used for all headers */
+
+.article-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin-bottom: @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
 }

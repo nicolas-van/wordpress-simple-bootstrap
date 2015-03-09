@@ -18,7 +18,7 @@ get_header(); ?>
 						
 						<header> 
 							
-							<div class="page-header"><h1 itemprop="headline"><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?></a> &raquo; <?php the_title(); ?></h1></div>
+							<div class="article-header"><h1 itemprop="headline"><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?></a> &raquo; <?php the_title(); ?></h1></div>
 							
 							
 							<?php display_post_meta() ?>
@@ -44,21 +44,19 @@ get_header(); ?>
 						</section> <!-- end article section -->
 						
 						<footer>
-							
-							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
-
-							<nav>
-							  	<ul class="pager">
-							    	<li class="previous"><?php previous_image_link( false, esc_html(__( 'Previous Image', 'wpbootstrap'))); ?></li>
-							    	<li class="next"><?php next_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap' ))); ?></li>
-							  	</ul>
-							</nav>
-							
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
 					<?php comments_template(); ?>
+					
+					<nav>
+					  	<ul class="pager">
+					    	<li class="previous"><?php previous_image_link( false, esc_html(__( 'Previous Image', 'wpbootstrap'))); ?></li>
+					    	<li class="next"><?php next_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap' ))); ?></li>
+					  	</ul>
+					</nav>
 					
 					<?php endwhile; ?>			
 					

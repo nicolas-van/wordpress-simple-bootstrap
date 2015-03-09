@@ -12,7 +12,7 @@
 						
 						<header>
 							
-							<div class="page-header"><h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
+							<div class="article-header"><h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
 						
 							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('wpbs-featured-small'); ?></a>
 							
@@ -25,8 +25,7 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-							<p class="tags"><?php the_tags('', ' ', ''); ?></p>
-							
+							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
