@@ -8,7 +8,7 @@
                     <div class="row">
                         <?php dynamic_sidebar('footer1'); ?>
 
-                        <div class="col-md-12 text-center">
+                        <div class="col-xs-12 text-center">
                             <p>Created with Wordpress</p>
                         </div>
                     </div>
