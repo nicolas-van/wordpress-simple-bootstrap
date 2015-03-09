@@ -55,8 +55,8 @@ if ( ! isset( $content_width ) )
     $content_width = 750;
 
 // Thumbnail sizes
-add_image_size( 'wpbs-featured-small', 780);
-add_image_size( 'wpbs-featured-big', 1170);
+add_image_size( 'wpbs-featured-small', 750, 750 * (9 / 21), true);
+add_image_size( 'wpbs-featured-big', 1141, 1141 * (9 / 21), true);
 
 // Sidebar and Footer declaration
 function wp_bootstrap_register_sidebars() {

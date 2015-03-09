@@ -12,7 +12,11 @@
 							
 							<div class="article-header"><h1 itemprop="headline"><?php the_title(); ?></h1></div>
 						
-							<?php the_post_thumbnail('wpbs-featured-small'); ?>
+							<?php if (has_post_thumbnail()) { ?>
+							<div class="featured-image">
+								<?php the_post_thumbnail('wpbs-featured-small'); ?>
+							</div>
+							<?php } ?>
 							
 							<?php display_post_meta() ?>
 						

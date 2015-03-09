@@ -245,10 +245,12 @@
 
 /* featured image */
 
-.wp-post-image {
-    .img-thumbnail();
-    margin-bottom: 20px;
-    width: 100%;
+.featured-image {
+    margin: -@line-height-computed (-@block-padding)-1 @line-height-computed (-@block-padding)-1;
+    img {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
 
 /* gallery */
