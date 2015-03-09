@@ -267,9 +267,12 @@
 /* a style used for all headers */
 
 .article-header {
-  padding-bottom: ((@line-height-computed / 2) - 1);
-  margin-bottom: @line-height-computed;
-  border-bottom: 1px solid @page-header-border-color;
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    margin-bottom: @line-height-computed;
+    border-bottom: 1px solid @page-header-border-color;
+    .has-post-thumbnail & {
+        border-bottom: none;
+    }
 }
 
 /* customization of the body if we choose to add an image */
