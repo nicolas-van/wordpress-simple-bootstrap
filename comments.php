@@ -12,7 +12,7 @@
 ?>
 
 <!-- You can start editing here. -->
-<div id="comments">
+<div id="comments" class="block">
 
 <?php if ( have_comments() ) : ?>
 	<?php if ( have_comments() ) : ?>
