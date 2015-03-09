@@ -230,11 +230,11 @@ function display_post($multiple_on_page) { ?>
             
             <?php if ($multiple_on_page) : ?>
             <div class="article-header">
-                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
             </div>
             <?php else: ?>
             <div class="article-header">
-                <h1><?php the_title(); ?></h1>
+                <h1 class="h2"><?php the_title(); ?></h1>
             </div>
             <?php endif ?>
 
