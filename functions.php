@@ -16,6 +16,9 @@ function wp_bootstrap_theme_support() {
     set_post_thumbnail_size(125, 125, true);   // default thumb size
     add_theme_support('automatic-feed-links'); // rss thingy
     add_theme_support('menus');            // wp menus
+    add_theme_support('custom-background', array(
+        'default-color' => '#eeeeee',
+    ));
     register_nav_menus(                      // wp3+ menus
         array( 
             'main_nav' => 'Main Menu',   // main nav in header
