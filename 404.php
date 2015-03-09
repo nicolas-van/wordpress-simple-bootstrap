@@ -15,7 +15,7 @@
 															
 							</div>
 													
-						</header> <!-- end article header -->
+						</header>/
 					
 						<section class="post_content">
 							
@@ -27,16 +27,16 @@
 								</div>
 							</div>
 					
-						</section> <!-- end article section -->
+						</section>/
 						
 						<footer>
 							
-						</footer> <!-- end article footer -->
+						</footer>/
 					
-					</article> <!-- end article -->
+					</article>/
 			
-				</div> <!-- end #main -->
+				</div>/
     
-			</div> <!-- end #content -->
+			</div>/
 
 <?php get_footer(); ?>

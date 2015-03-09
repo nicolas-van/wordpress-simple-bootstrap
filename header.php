@@ -39,7 +39,7 @@
 					<?php //} ?>
 				</div>
 
-			</div> <!-- end .container -->
+			</div>/
 		</nav>
 		
 		<div class="container">
