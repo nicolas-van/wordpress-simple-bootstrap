@@ -35,8 +35,8 @@
 					
 					<nav>
 						<ul class="pager">
-							<li class="previous"><?php previous_post_link( '%link', esc_html(__( 'Previous Post')) ); ?></li>
-							<li class="next"><?php next_post_link( '%link', esc_html(__( 'Next Post')) ); ?></li>
+							<li class="previous"><?php next_post_link( '%link', esc_html(__( 'Next Post')) ); ?></li>
+							<li class="next"><?php previous_post_link( '%link', esc_html(__( 'Previous Post')) ); ?></li>
 						</ul>
 					</nav>
 					

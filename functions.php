@@ -1,12 +1,4 @@
 <?php
-/*
-Author: Eddie Machado
-URL: htp://themble.com/bones/
-
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images, 
-sidebars, comments, ect.
-*/
 
 // registration of the translations
 load_theme_textdomain( 'wpbootstrap', TEMPLATEPATH.'/languages' );
@@ -217,8 +209,8 @@ function page_navi() {
 
     <nav>
         <ul class="pager">
-            <li class="previous"><?php next_posts_link(esc_html(__('Older posts'))); ?></li>
-            <li class="next"><?php previous_posts_link(esc_html(__('Newer posts'))); ?></li>
+            <li class="previous"><?php previous_posts_link(esc_html(__('Newer posts'))); ?></li>
+            <li class="next"><?php next_posts_link(esc_html(__('Older posts'))); ?></li>
         </ul>
     </nav>
 

@@ -1,7 +1,4 @@
 <?php
-/*
-The comments page for Bones
-*/
 
 // Do not delete these lines
   if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
