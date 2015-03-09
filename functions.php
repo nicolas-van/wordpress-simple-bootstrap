@@ -73,7 +73,7 @@ function wp_bootstrap_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-sm-6 col-md-3 %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',

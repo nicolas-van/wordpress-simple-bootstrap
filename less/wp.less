@@ -226,10 +226,9 @@
     }
 }
 
-/* sidebar and footer bar */
+/* widgets */
 
 .vertical-nav {
-    .block();
     .widget ul {
         .list-unstyled();
         li {
@@ -244,6 +243,37 @@
             }
         }
     }
+}
+
+/* footer */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    height: 100%;
+}
+
+#content-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+    >* {
+        display: table-row;
+    }
+}
+
+#page-content {
+    height: 100%;
+}
+
+#inner-footer {
+    background-color: @footer-bg;
+    padding-top: @footer-padding;
+    padding-bottom: (@footer-padding - @padding-base-vertical);
+    border-top: 1px solid @navbar-default-border;
 }
 
 /* featured image */
@@ -262,6 +292,7 @@
     .make-row();
     .gallery-item {
         .make-xs-column(6);
+        .make-sm-column(4);
         .make-md-column(3);
         padding-bottom: 15px;
     }
@@ -276,12 +307,6 @@
     .has-post-thumbnail & {
         border-bottom: none;
     }
-}
-
-/* customization of the body if we choose to add an image */
-
-body {
-    background-size: cover;
 }
 
 /* just a little style to remove spacing on the pager */
