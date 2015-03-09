@@ -46,17 +46,17 @@ get_header(); ?>
 						<footer>
 							<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
 						</footer> <!-- end article footer -->
+
+						<nav>
+						  	<ul class="pager">
+						    	<li class="previous"><?php next_image_link( false, esc_html(__( 'Previous Image', 'wpbootstrap' ))); ?></li>
+						    	<li class="next"><?php previous_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap'))); ?></li>
+						  	</ul>
+						</nav>
 					
 					</article> <!-- end article -->
 					
 					<?php comments_template(); ?>
-					
-					<nav>
-					  	<ul class="pager">
-					    	<li class="previous"><?php previous_image_link( false, esc_html(__( 'Previous Image', 'wpbootstrap'))); ?></li>
-					    	<li class="next"><?php next_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap' ))); ?></li>
-					  	</ul>
-					</nav>
 					
 					<?php endwhile; ?>			
 					

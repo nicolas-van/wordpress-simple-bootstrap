@@ -33,12 +33,14 @@
 					
 					<?php comments_template('',true); ?>
 					
-					<nav>
-						<ul class="pager">
+					<?php if (get_next_post() || get_previous_post()) { ?>
+					<nav class="block">
+						<ul class="pager pager-unspaced">
 							<li class="previous"><?php next_post_link( '%link', esc_html(__( 'Next Post')) ); ?></li>
 							<li class="next"><?php previous_post_link( '%link', esc_html(__( 'Previous Post')) ); ?></li>
 						</ul>
 					</nav>
+					<?php } ?>
 					
 					<?php endwhile; ?>			
 					
