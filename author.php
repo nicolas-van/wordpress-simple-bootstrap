@@ -24,7 +24,7 @@
 
 					<?php while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+					<article id="post-<?php the_ID(); ?>" <?php post_class("block"); ?> role="article">
 						
 						<header>
 							
@@ -58,7 +58,7 @@
 					
 					<?php else : ?>
 					
-					<article id="post-not-found">
+					<article id="post-not-found" class="block">
 					    <header>
 					    	<h1><?php _e("No Posts Yet", "wpbootstrap"); ?></h1>
 					    </header>
