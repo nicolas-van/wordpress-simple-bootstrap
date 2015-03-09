@@ -19,7 +19,6 @@
 
 .block {
     background-color: @block-bg;
-    border: @block-border;
     border-radius: @block-border-radius;
     padding: @block-padding @block-padding (@block-padding - @padding-base-vertical) @block-padding;
     margin-bottom: 30px;
@@ -247,7 +246,7 @@
 /* featured image */
 
 .featured-image {
-    margin: -@line-height-computed (-@block-padding)-1 @line-height-computed (-@block-padding)-1;
+    margin: -@line-height-computed -@block-padding @line-height-computed -@block-padding;
     img {
         width: 100%;
         height: auto;
