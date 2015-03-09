@@ -19,6 +19,7 @@ function wp_bootstrap_theme_support() {
     add_theme_support('custom-background', array(
         'default-color' => '#595959',
     ));
+    add_theme_support( 'title-tag' );
     register_nav_menus(                      // wp3+ menus
         array( 
             'main_nav' => 'Main Menu',   // main nav in header
