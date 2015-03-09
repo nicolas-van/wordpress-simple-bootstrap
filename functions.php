@@ -17,7 +17,7 @@ function wp_bootstrap_theme_support() {
     add_theme_support('automatic-feed-links'); // rss thingy
     add_theme_support('menus');            // wp menus
     add_theme_support('custom-background', array(
-        'default-color' => '#eeeeee',
+        'default-color' => '#595959',
     ));
     register_nav_menus(                      // wp3+ menus
         array( 
@@ -55,8 +55,7 @@ if ( ! isset( $content_width ) )
     $content_width = 750;
 
 // Thumbnail sizes
-add_image_size( 'wpbs-featured-small', 750, 750 * (9 / 21), true);
-add_image_size( 'wpbs-featured-big', 1141, 1141 * (9 / 21), true);
+add_image_size( 'wpbs-featured', 1140, 1140 * (9 / 21), true);
 
 // Sidebar and Footer declaration
 function wp_bootstrap_register_sidebars() {
@@ -241,9 +240,9 @@ function display_post($multiple_on_page) { ?>
             <?php if (has_post_thumbnail()) { ?>
             <div class="featured-image">
                 <?php if ($multiple_on_page) : ?>
-                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('wpbs-featured-small'); ?></a>
+                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('wpbs-featured'); ?></a>
                 <?php else: ?>
-                <?php the_post_thumbnail('wpbs-featured-small'); ?>
+                <?php the_post_thumbnail('wpbs-featured'); ?>
                 <?php endif ?>
             </div>
             <?php } ?>
