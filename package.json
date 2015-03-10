@@ -1,14 +1,14 @@
 {
-  "name": "wp-bootstrap",
+  "name": "simple-bootstrap",
   "version": "0.0.0",
-  "description": "WP BOOTSTRAP ===================",
+  "description": "Basic Wordpress theme using Boostrap. Built to be very clean.",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-less": "~0.11.4",
-    "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-uglify": "~0.5.1"
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.6.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,11 +16,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nicolas-van/wp-bootstrap.git"
+    "url": "git://github.com/nicolas-van/wordpress-simple-boostrap.git"
   },
   "author": "",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nicolas-van/wp-bootstrap/issues"
+    "url": "https://github.com/nicolas-van/wordpress-simple-boostrap/issues"
   }
 }

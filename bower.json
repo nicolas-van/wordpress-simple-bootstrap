@@ -1,7 +1,7 @@
 {
-  "name": "wp-bootstrap",
+  "name": "simple-bootstrap",
   "version": "0.0.0",
-  "homepage": "https://github.com/nicolas-van/wp-bootstrap",
+  "homepage": "https://github.com/nicolas-van/wordpress-simple-bootstrap",
   "authors": [
     "Nicolas Vanhoren <nicolas.vanhoren@gmail.com>"
   ],
