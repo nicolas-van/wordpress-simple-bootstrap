@@ -5,7 +5,7 @@
 				<div id="main" class="<?php echo is_active_sidebar( 'sidebar1' ) ? 'col-sm-8' : 'col-md-8 col-md-push-2'; ?>" role="main">
 				
 					<div class="block block-title">
-						<h1 class="archive_title h2">
+						<h1 class="archive_title">
 							<span><?php _e("Posts By:", "wpbootstrap"); ?></span> 
 							<?php 
 								// If google profile field is filled out on author profile, link the author's page to their google+ profile page
