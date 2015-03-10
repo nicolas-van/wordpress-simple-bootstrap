@@ -41,14 +41,23 @@ module.exports = function(grunt) {
         }
       }
     },
+    copy: {
+      main: {
+        files: [
+          // includes files within path
+          {expand: true, flatten: true, src: ['bower_components/bootstrap/dist/fonts/*'], dest: 'fonts/'},
+        ],
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('make', ['less', 'cssmin', 'uglify']);
+  grunt.registerTask('make', ['less', 'cssmin', 'uglify', 'copy']);
   grunt.registerTask('watcher', ['make', 'watch']);
 
   grunt.registerTask('default', ['make']);
