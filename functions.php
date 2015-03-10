@@ -52,8 +52,17 @@ add_image_size( 'wpbs-featured', 1140, 1140 * (9 / 21), true);
 // Sidebar and Footer declaration
 function wp_bootstrap_register_sidebars() {
     register_sidebar(array(
-    	'id' => 'sidebar1',
-    	'name' => 'Sidebar',
+        'id' => 'sidebar-right',
+        'name' => 'Right Sidebar',
+        'description' => 'Used on every page.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+    register_sidebar(array(
+    	'id' => 'sidebar-left',
+    	'name' => 'Left Sidebar',
     	'description' => 'Used on every page.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
@@ -263,5 +272,26 @@ function display_post($multiple_on_page) { ?>
 <?php }
 
 function main_classes() {
-    echo is_active_sidebar( 'sidebar1' ) ? 'col-sm-8' : 'col-md-8 col-md-push-2';
+    $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
+    $classes = "";
+    if ($nbr_sidebars == 0) {
+        $classes .= "col-sm-8 col-md-push-2";
+    } else if ($nbr_sidebars == 1) {
+        $classes .= "col-md-8";
+    } else {
+        $classes .= "col-md-6";
+    }
+    if (is_active_sidebar( 'sidebar-left' )) {
+        $classes .= " col-md-push-".($nbr_sidebars == 2 ? 3 : 4);
+    }
+    echo $classes;
+}
+function sidebar_left_classes() {
+    $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
+    echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4).' col-md-pull-'.($nbr_sidebars == 2 ? 6 : 8);
+
+}
+function sidebar_right_classes() {
+    $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
+    echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4);
 }

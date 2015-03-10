@@ -30,7 +30,8 @@
 
 	</div>
 	
-	<?php get_sidebar(); // sidebar 1 ?>
+	<?php get_sidebar("left"); ?>
+	<?php get_sidebar("right"); ?>
 
 </div>
 
