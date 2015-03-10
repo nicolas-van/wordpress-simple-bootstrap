@@ -56,13 +56,12 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src: ['**', '.**'],
+            src: ['**'],
             dest: '/',
             filter: function(path) {
               if (/^simple-bootstrap.zip$/.test(path) ||
                 /^bower_components\b\/?/.test(path) ||
-                /^node_modules\b\/?/.test(path) ||
-                /^\.git\b\/?/.test(path)
+                /^node_modules\b\/?/.test(path)
                 ) {
                 return false;
               }
