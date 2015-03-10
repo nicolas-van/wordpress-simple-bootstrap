@@ -49,6 +49,30 @@ module.exports = function(grunt) {
         ],
       },
     },
+    compress: {
+      main: {
+        options: {
+          archive: 'simple-bootstrap.zip'
+        },
+        files: [
+          {
+            src: ['**', '.**'],
+            dest: '/',
+            filter: function(path) {
+              if (/^simple-bootstrap.zip$/.test(path) ||
+                /^bower_components\b\/?/.test(path) ||
+                /^node_modules\b\/?/.test(path) ||
+                /^\.git\b\/?/.test(path)
+                ) {
+                return false;
+              }
+              return true;
+            }
+          },
+        ]
+      }
+    }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -56,8 +80,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('make', ['less', 'cssmin', 'uglify', 'copy']);
+  grunt.registerTask('dist', ['make', 'compress']);
   grunt.registerTask('watcher', ['make', 'watch']);
 
   grunt.registerTask('default', ['make']);
