@@ -19,13 +19,6 @@
 
 <?php if ( have_comments() ) : ?>
 	<h3><?php echo __("Comments", "default")?></h3>
-
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<ul id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<li class="nav-previous"><?php previous_comments_link( __("&laquo; Older Comments", "default") ); ?></li>
-		<li class="nav-next"><?php next_comments_link( __("Newer Comments &raquo;", "default") ); ?></li>
-	</ul>
-	<?php endif; ?>
 	
 	<ol class="commentlist">
 		<?php wp_list_comments( array(
@@ -37,8 +30,10 @@
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<ul id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-		<li class="nav-previous"><?php previous_comments_link( __("&laquo; Older Comments", "default") ); ?></li>
-		<li class="nav-next"><?php next_comments_link( __("Newer Comments &raquo;", "default") ); ?></li>
+		<ul class="pager">
+			<li class="previous"><?php previous_comments_link( __("&laquo; Older Comments", "default") ); ?></li>
+			<li class="next"><?php next_comments_link( __("Newer Comments &raquo;", "default") ); ?></li>
+		</ul>
 	</ul>
 	<?php endif; ?>
 

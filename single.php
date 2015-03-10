@@ -13,8 +13,8 @@
 					<?php if (get_next_post() || get_previous_post()) { ?>
 					<nav class="block">
 						<ul class="pager pager-unspaced">
-							<li class="previous"><?php next_post_link( '%link', '<span class="glyphicon glyphicon-arrow-left"></span> '.esc_html(__( 'Next Post', "default")) ); ?></li>
-							<li class="next"><?php previous_post_link( '%link', esc_html(__( 'Previous Post', "default")).' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
+							<li class="previous"><?php previous_post_link( '%link', "&laquo; ".esc_html(__( 'Previous Post', "default")) ); ?></li>
+							<li class="next"><?php next_post_link( '%link', esc_html(__( 'Next Post', "default"))." &raquo;" ); ?></li>
 						</ul>
 					</nav>
 					<?php } ?>
