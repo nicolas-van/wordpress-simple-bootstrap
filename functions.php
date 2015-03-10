@@ -27,7 +27,7 @@ add_action('after_setup_theme','wp_bootstrap_theme_support');
 
 function theme_scripts() { 
     // For child themes
-    wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null, 'all' );
+    wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.css', array(), null, 'all' );
     wp_enqueue_style( 'wpbs-style' );
     wp_register_script( 'bower-libs', 
         get_template_directory_uri() . '/app.min.js', 

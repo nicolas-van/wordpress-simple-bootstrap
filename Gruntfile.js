@@ -81,7 +81,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
-  grunt.registerTask('make', ['less', 'cssmin', 'uglify', 'copy']);
+  grunt.registerTask('make', ['less', 'uglify', 'copy']);
   grunt.registerTask('dist', ['make', 'compress']);
   grunt.registerTask('watcher', ['make', 'watch']);
 
