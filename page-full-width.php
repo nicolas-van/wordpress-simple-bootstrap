@@ -28,8 +28,6 @@ Template Name: Full Width Page
 			
 				</div>
     
-				<?php //get_sidebar(); // sidebar 1 ?>
-    
 			</div>
 
 <?php get_footer(); ?>

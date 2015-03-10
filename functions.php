@@ -262,4 +262,6 @@ function display_post($multiple_on_page) { ?>
 
 <?php }
 
-?>
+function main_classes() {
+    echo is_active_sidebar( 'sidebar1' ) ? 'col-sm-8' : 'col-md-8 col-md-push-2';
+}

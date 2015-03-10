@@ -2,7 +2,7 @@
 			
 			<div id="content" class="row">
 			
-				<div id="main" class="col-sm-8 <?php echo (is_active_sidebar( 'sidebar1' ) ? '' : 'col-sm-push-2'); ?>" role="main">
+				<div id="main" class="<?php main_classes(); ?>" role="main">
 					
 					<div class="block block-title">
 						<h1 class="archive_title">

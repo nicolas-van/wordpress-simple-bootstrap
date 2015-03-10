@@ -2,7 +2,7 @@
 			
 			<div id="content" class="row">
 			
-				<div id="main" class="<?php echo is_active_sidebar( 'sidebar1' ) ? 'col-sm-8' : 'col-md-8 col-md-push-2'; ?>" role="main">
+				<div id="main" class="<?php main_classes(); ?>" role="main">
 					
 					<div class="block block-title">
 						<h1><?php echo _x("Search for:", "label", "default"); ?> <?php echo esc_attr(get_search_query()); ?></h1>
