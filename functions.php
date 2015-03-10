@@ -1,8 +1,5 @@
 <?php
 
-// registration of the translations
-load_theme_textdomain( 'wpbootstrap', get_template_directory().'/languages' );
-
 // Declaration of theme supported features
 function wp_bootstrap_theme_support() {
     add_theme_support( 'html5', array(

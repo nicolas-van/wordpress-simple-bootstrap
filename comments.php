@@ -6,7 +6,7 @@
 
 	if ( post_password_required() ) { ?>
 		<div id="comments" class="block">
-			<?php _e("This post is password protected. Enter the password to view comments.","wpbootstrap"); ?>
+			<?php _e("This post is password protected. Enter the password to view comments.", "default"); ?>
 		</div>
 		<?php
 		return;
@@ -22,8 +22,8 @@
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<ul id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<li class="nav-previous"><?php previous_comments_link( '<span class="glyphicon glyphicon-arrow-left"></span> '.__("Older comments","wpbootstrap") ); ?></li>
-		<li class="nav-next"><?php next_comments_link( __("Newer comments","wpbootstrap").' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
+		<li class="nav-previous"><?php previous_comments_link( __("&laquo; Older Comments", "default") ); ?></li>
+		<li class="nav-next"><?php next_comments_link( __("Newer Comments &raquo;", "default") ); ?></li>
 	</ul>
 	<?php endif; ?>
 	
@@ -37,8 +37,8 @@
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<ul id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-		<li class="nav-previous"><?php previous_comments_link( '<span class="glyphicon glyphicon-arrow-left"></span> '.__("Older comments","wpbootstrap") ); ?></li>
-		<li class="nav-next"><?php next_comments_link( __("Newer comments","wpbootstrap").' <span class="glyphicon glyphicon-arrow-right"></span>' ); ?></li>
+		<li class="nav-previous"><?php previous_comments_link( __("&laquo; Older Comments", "default") ); ?></li>
+		<li class="nav-next"><?php next_comments_link( __("Newer Comments &raquo;", "default") ); ?></li>
 	</ul>
 	<?php endif; ?>
 

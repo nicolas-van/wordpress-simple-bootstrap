@@ -21,14 +21,7 @@ Template Name: Full Width Page
 					<?php else : ?>
 					
 					<article id="post-not-found" class="block">
-					    <header>
-					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
+					    <p><?php _e("No pages found.", "default"); ?></p>
 					</article>
 					
 					<?php endif; ?>

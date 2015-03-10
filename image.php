@@ -49,8 +49,8 @@ get_header(); ?>
 
 						<nav>
 						  	<ul class="pager">
-						    	<li class="previous"><?php next_image_link( false, '<span class="glyphicon glyphicon-arrow-left"></span> '.esc_html(__( 'Previous Image', 'wpbootstrap' ))); ?></li>
-						    	<li class="next"><?php previous_image_link( false, esc_html(__( 'Next Image', 'wpbootstrap')).' <span class="glyphicon glyphicon-arrow-right"></span>'); ?></li>
+						    	<li class="previous"><?php next_image_link( false, esc_html(__( '&laquo; Previous', "default"))); ?></li>
+						    	<li class="next"><?php previous_image_link( false, esc_html(__( 'Next &raquo;', "default"))); ?></li>
 						  	</ul>
 						</nav>
 					
@@ -63,14 +63,7 @@ get_header(); ?>
 					<?php else : ?>
 					
 					<article id="post-not-found" class="block">
-					    <header>
-					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
+					    <p><?php _e("No items found.", "default"); ?></p>
 					</article>
 					
 					<?php endif; ?>
