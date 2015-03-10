@@ -1,7 +1,7 @@
 <?php
 
 // registration of the translations
-load_theme_textdomain( 'wpbootstrap', TEMPLATEPATH.'/languages' );
+load_theme_textdomain( 'wpbootstrap', get_template_directory().'/languages' );
 
 // Declaration of theme supported features
 function wp_bootstrap_theme_support() {
@@ -28,27 +28,21 @@ function wp_bootstrap_theme_support() {
 }
 add_action('after_setup_theme','wp_bootstrap_theme_support');
 
-// enqueue styles
-if( !function_exists("theme_styles") ) {  
-    function theme_styles() { 
-        // For child themes
-        wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null, 'all' );
-        wp_enqueue_style( 'wpbs-style' );
+function theme_scripts() { 
+    // For child themes
+    wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null, 'all' );
+    wp_enqueue_style( 'wpbs-style' );
+    wp_register_script( 'bower-libs', 
+        get_template_directory_uri() . '/app.min.js', 
+        array('jquery'), 
+        null );
+    wp_enqueue_script('bower-libs');
+    
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'theme_styles' );
-
-// enqueue javascript
-if( !function_exists( "theme_js" ) ) {  
-    function theme_js(){
-        wp_register_script( 'bower-libs', 
-            get_template_directory_uri() . '/app.min.js', 
-            array('jquery'), 
-            null );
-        wp_enqueue_script('bower-libs');
-    }
-}
-add_action( 'wp_enqueue_scripts', 'theme_js' );
+add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
 
 // Set content width
@@ -195,11 +189,11 @@ function display_post_meta() {
         <li>
             <?php
                 $sp = '<span class="glyphicon glyphicon-comment"></span> ';
-                comments_popup_link( $sp.esc_html(__( 'Leave a comment')), $sp.esc_html(__( '1 Comment')), $sp.esc_html(__( '% Comments')) );
+                comments_popup_link( $sp.esc_html(__( 'Leave a comment', "default")), $sp.esc_html(__( '1 Comment', "default")), $sp.esc_html(__( '% Comments', "default")) );
             ?>
         </li>
         <?php endif; ?>
-        <?php edit_post_link(esc_html(__( 'Edit')), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
+        <?php edit_post_link(esc_html(__( 'Edit', "default")), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
     </ul>
 
 <?php
@@ -213,8 +207,8 @@ function page_navi() {
     <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
         <nav class="block">
             <ul class="pager pager-unspaced">
-                <li class="previous"><?php previous_posts_link('<span class="glyphicon glyphicon-arrow-left"></span> '.esc_html(__('Newer posts'))); ?></li>
-                <li class="next"><?php next_posts_link(esc_html(__('Older posts')).' <span class="glyphicon glyphicon-arrow-right"></span>'); ?></li>
+                <li class="previous"><?php previous_posts_link('<span class="glyphicon glyphicon-arrow-left"></span> '.esc_html(__('Newer posts', "default"))); ?></li>
+                <li class="next"><?php next_posts_link(esc_html(__('Older posts', "default")).' <span class="glyphicon glyphicon-arrow-right"></span>'); ?></li>
             </ul>
         </nav>
     <?php } ?>

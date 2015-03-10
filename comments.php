@@ -18,7 +18,7 @@
 <div id="comments" class="block">
 
 <?php if ( have_comments() ) : ?>
-	<h3><?php echo __("Comments")?></h3>
+	<h3><?php echo __("Comments", "default")?></h3>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<ul id="comment-nav-above" class="navigation comment-navigation" role="navigation">
