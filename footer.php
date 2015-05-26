@@ -9,8 +9,8 @@
                         <?php dynamic_sidebar('footer1'); ?>
 
                         <div class="col-xs-12 text-center">
-                            <p>Copyright 2015 <a href="https://github.com/nicolas-van">@nicolas-van</a></p>
-                            <p>Created with Wordpress</p>
+                            <p><?php _e('Copyright 2015 <a href="https://github.com/nicolas-van">@nicolas-van</a>', 'simple-bootstrap') ?></p>
+                            <p><?php _e("Powered by WordPress", "default"); ?></p>
                         </div>
                     </div>
                 </div>

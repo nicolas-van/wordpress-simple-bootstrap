@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-bootstrap\n"
+"POT-Creation-Date: 2015-05-26 12:06+0100\n"
+"PO-Revision-Date: 2015-05-26 12:08+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx\n"
+"X-Poedit-Basepath: ../\n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: page.php:18 page-full-width.php:24
+msgid "No pages found."
+msgstr ""
+
+#: searchform.php:4 searchform.php:6
+msgid "Search"
+msgstr ""
+
+#: functions.php:202
+msgid "Leave a comment"
+msgstr ""
+
+#: functions.php:202
+msgid "1 Comment"
+msgstr ""
+
+#: functions.php:202
+msgid "% Comments"
+msgstr ""
+
+#: functions.php:206
+msgid "Edit"
+msgstr ""
+
+#: functions.php:220
+msgid "Older posts"
+msgstr ""
+
+#: functions.php:221
+msgid "Newer posts"
+msgstr ""
+
+#: image.php:52
+msgid "&laquo; Previous"
+msgstr ""
+
+#: image.php:53
+msgid "Next &raquo;"
+msgstr ""
+
+#: image.php:66 archive.php:26 search.php:26 attachment.php:18
+msgid "No items found."
+msgstr ""
+
+#: index.php:20 single.php:27
+msgid "No posts found."
+msgstr ""
+
+#: comments.php:5
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:17
+msgid "Comments"
+msgstr ""
+
+#: comments.php:30
+msgid "&laquo; Older Comments"
+msgstr ""
+
+#: comments.php:31
+msgid "Newer Comments &raquo;"
+msgstr ""
+
+#: single.php:16
+msgid "Previous Post"
+msgstr ""
+
+#: single.php:17
+msgid "Next Post"
+msgstr ""
+
+#: 404.php:12
+msgid "Page not found"
+msgstr ""
+
+#: footer.php:12
+msgid ""
+"Copyright 2015 <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
+msgstr ""
+
+#: footer.php:13
+msgid "Powered by WordPress"
+msgstr ""
