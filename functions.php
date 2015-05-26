@@ -41,6 +41,12 @@ function simple_bootstrap_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'simple_bootstrap_theme_scripts' );
 
+function simple_bootstrap_load_fonts() {
+    wp_register_style('simple_bootstrap_googleFonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+    wp_enqueue_style('simple_bootstrap_googleFonts');
+}
+
+add_action('wp_print_styles', 'simple_bootstrap_load_fonts');
 
 // Set content width
 if ( ! isset( $content_width ) )
