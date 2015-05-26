@@ -12,7 +12,6 @@ function simple_boostrap_theme_support() {
     add_theme_support('post-thumbnails');      // wp thumbnails (sizes handled in functions.php)
     set_post_thumbnail_size(125, 125, true);   // default thumb size
     add_theme_support('automatic-feed-links'); // rss thingy
-    add_theme_support('menus');            // wp menus
     add_theme_support('custom-background', array(
         'default-color' => '#595959',
     ));
