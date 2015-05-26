@@ -21,6 +21,7 @@ function simple_boostrap_theme_support() {
             'main_nav' => 'Main Menu',   // main nav in header
         )
     );
+    add_image_size( 'simple_boostrap_featured', 1140, 1140 * (9 / 21), true);
 }
 add_action('after_setup_theme','simple_boostrap_theme_support');
 
@@ -44,9 +45,6 @@ add_action( 'wp_enqueue_scripts', 'simple_bootstrap_theme_scripts' );
 // Set content width
 if ( ! isset( $content_width ) )
     $content_width = 750;
-
-// Thumbnail sizes
-add_image_size( 'simple_boostrap_featured', 1140, 1140 * (9 / 21), true);
 
 // Sidebar and Footer declaration
 function simple_boostrap_register_sidebars() {
