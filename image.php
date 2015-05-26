@@ -18,7 +18,7 @@ get_header(); ?>
 			
 			<header> 
 				
-				<div class="article-header"><h1 itemprop="headline"><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?></a> &raquo; <?php the_title(); ?></h1></div>
+				<div class="article-header"><h1 itemprop="headline"><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo esc_html(get_the_title($post->post_parent)); ?></a> &raquo; <?php the_title(); ?></h1></div>
 				
 				
 				<?php simple_bootstrap_display_post_meta() ?>
@@ -49,8 +49,8 @@ get_header(); ?>
 
 			<nav>
 			  	<ul class="pager">
-			    	<li class="previous"><?php next_image_link( false, esc_html(__( '&laquo; Previous', "default"))); ?></li>
-			    	<li class="next"><?php previous_image_link( false, esc_html(__( 'Next &raquo;', "default"))); ?></li>
+			    	<li class="previous"><?php next_image_link( false, __( '&laquo; Previous', "default")); ?></li>
+			    	<li class="next"><?php previous_image_link( false, __( 'Next &raquo;', "default")); ?></li>
 			  	</ul>
 			</nav>
 		

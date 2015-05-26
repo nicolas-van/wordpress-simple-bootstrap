@@ -87,7 +87,7 @@ function simple_boostrap_register_sidebars() {
 add_action( 'widgets_init', 'simple_boostrap_register_sidebars' );
 
 // Menu output mods
-class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu{
+class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu {
 
     function start_el(&$output, $object, $depth = 0, $args = Array(), $current_object_id = 0) {
 
@@ -134,19 +134,19 @@ class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu{
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $object, $depth, $args );
     } // end start_el function
-        
+    
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class='dropdown-menu' role='menu'>\n";
     }
-      
+    
     function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ){
         $id_field = $this->db_fields['id'];
         if ( is_object( $args[0] ) ) {
             $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
         }
         return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-    }        
+    }
 }
 
 // Add Twitter Bootstrap's standard 'active' class name to the active nav link item
@@ -184,26 +184,26 @@ function simple_bootstrap_display_post_meta() {
 
     <ul class="meta text-muted list-inline">
         <li>
-            <a href="<?php echo esc_url(get_permalink()) ?>">
+            <a href="<?php the_permalink() ?>">
                 <span class="glyphicon glyphicon-time"></span>
-                <?php echo esc_html(get_the_date()); ?>
+                <?php the_date(); ?>
             </a>
         </li>
         <li>
-            <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')));?>">
+            <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'));?>">
                 <span class="glyphicon glyphicon-user"></span>
-                <?php echo esc_html(get_the_author()); ?>
+                <?php the_author(); ?>
             </a>
         </li>
         <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
         <li>
             <?php
                 $sp = '<span class="glyphicon glyphicon-comment"></span> ';
-                comments_popup_link( $sp.esc_html(__( 'Leave a comment', "default")), $sp.esc_html(__( '1 Comment', "default")), $sp.esc_html(__( '% Comments', "default")) );
+                comments_popup_link($sp . __( 'Leave a comment', "default"), $sp . __( '1 Comment', "default"), $sp . __( '% Comments', "default"));
             ?>
         </li>
         <?php endif; ?>
-        <?php edit_post_link(esc_html(__( 'Edit', "default")), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
+        <?php edit_post_link(__( 'Edit', "default"), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
     </ul>
 
 <?php
@@ -217,8 +217,8 @@ function simple_boostrap_page_navi() {
     <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
         <nav class="block">
             <ul class="pager pager-unspaced">
-                <li class="previous"><?php next_posts_link("&laquo; ".esc_html(__('Older posts', "default"))); ?></li>
-                <li class="next"><?php previous_posts_link(esc_html(__('Newer posts', "default"))." &rsquo;"); ?></li>
+                <li class="previous"><?php next_posts_link("&laquo; " . __('Older posts', "default")); ?></li>
+                <li class="next"><?php previous_posts_link(__('Newer posts', "default") . " &rsquo;"); ?></li>
             </ul>
         </nav>
     <?php } ?>
@@ -276,7 +276,7 @@ function simple_boostrap_display_post($multiple_on_page) { ?>
 <?php }
 
 function simple_boostrap_main_classes() {
-    $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
+    $nbr_sidebars = (is_active_sidebar('sidebar-left') ? 1 : 0) + (is_active_sidebar('sidebar-right') ? 1 : 0);
     $classes = "";
     if ($nbr_sidebars == 0) {
         $classes .= "col-sm-8 col-md-push-2";
@@ -290,12 +290,13 @@ function simple_boostrap_main_classes() {
     }
     echo $classes;
 }
-function simple_boostrap_sidebar_left_classes() {
-    $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
-    echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4).' col-md-pull-'.($nbr_sidebars == 2 ? 6 : 8);
 
+function simple_boostrap_sidebar_left_classes() {
+    $nbr_sidebars = (is_active_sidebar('sidebar-left') ? 1 : 0) + (is_active_sidebar('sidebar-right') ? 1 : 0);
+    echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4).' col-md-pull-'.($nbr_sidebars == 2 ? 6 : 8);
 }
+
 function simple_boostrap_sidebar_right_classes() {
-    $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
+    $nbr_sidebars = (is_active_sidebar('sidebar-left') ? 1 : 0) + (is_active_sidebar('sidebar-right') ? 1 : 0);
     echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4);
 }
