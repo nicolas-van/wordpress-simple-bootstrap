@@ -13,3 +13,13 @@ bower install
 grunt
 
 This theme was inspired by wp-bootstrap: https://github.com/320press/wordpress-bootstrap
+
+Copyright 2015 Nicolas Vanhoren
+Released under the terms of the MIT license.
+
+Simple Boostrap is bundled with:
+
+- Bootstrap (Copyright 2015 Twitter, released under the terms of the MIT license)
+- jQuery (Copyright 2014 jQuery Foundation, released under terms of the MIT license)
+- Respond.js (Copyright 2011: Scott Jehl, released under terms of the MIT license)
+- Html5shiv (Copyright Alexander Farkas, Jonathan Neal, Paul Irish and John-David Dalton, released under terms of the MIT license)

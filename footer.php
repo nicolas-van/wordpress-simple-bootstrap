@@ -9,6 +9,7 @@
                         <?php dynamic_sidebar('footer1'); ?>
 
                         <div class="col-xs-12 text-center">
+                            <p>Copyright 2015 <a href="https://github.com/nicolas-van">@nicolas-van</a></p>
                             <p>Created with Wordpress</p>
                         </div>
                     </div>
