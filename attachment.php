@@ -2,11 +2,11 @@
 
 <div id="content" class="row">
 
-	<div id="main" class="<?php main_classes(); ?>" role="main">
+	<div id="main" class="<?php simple_boostrap_main_classes(); ?>" role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-		<?php display_post(false); ?>
+		<?php simple_boostrap_display_post(false); ?>
 		
 		<?php comments_template('', true); ?>
 		

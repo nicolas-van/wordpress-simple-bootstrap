@@ -12,7 +12,7 @@ Template Name: Full Width Page
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-		<?php display_post(false); ?>
+		<?php simple_boostrap_display_post(false); ?>
 		
 		<?php comments_template(); ?>
 		

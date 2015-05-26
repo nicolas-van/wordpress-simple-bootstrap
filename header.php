@@ -29,7 +29,7 @@
 
 					<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
 						<?php
-						    display_main_menu();
+						    simple_bootstrap_display_main_menu();
 						?>
 
 					</div>

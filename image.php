@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div id="content" class="row">
 
-	<div id="main" class="<?php main_classes(); ?>" role="main">
+	<div id="main" class="<?php simple_boostrap_main_classes(); ?>" role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="article-header"><h1 itemprop="headline"><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?></a> &raquo; <?php the_title(); ?></h1></div>
 				
 				
-				<?php display_post_meta() ?>
+				<?php simple_bootstrap_display_post_meta() ?>
 			
 			</header>
 		

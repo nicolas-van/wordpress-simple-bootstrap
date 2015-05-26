@@ -2,7 +2,7 @@
 
 <div id="content" class="row">
 
-	<div id="main" class="<?php main_classes(); ?>" role="main">
+	<div id="main" class="<?php simple_boostrap_main_classes(); ?>" role="main">
 		
 		<div class="block block-title">
 			<h1 class="archive_title">
@@ -14,11 +14,11 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 		
-		<?php display_post(true); ?>
+		<?php simple_boostrap_display_post(true); ?>
 		
 		<?php endwhile; ?>	
 		
-		<?php page_navi(); ?>	
+		<?php simple_boostrap_page_navi(); ?>	
 		
 		<?php else : ?>
 		

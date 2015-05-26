@@ -1,7 +1,7 @@
 <?php
 
 // Declaration of theme supported features
-function wp_bootstrap_theme_support() {
+function simple_boostrap_theme_support() {
     add_theme_support( 'html5', array(
         'search-form',
         'comment-form',
@@ -23,9 +23,9 @@ function wp_bootstrap_theme_support() {
         )
     );
 }
-add_action('after_setup_theme','wp_bootstrap_theme_support');
+add_action('after_setup_theme','simple_boostrap_theme_support');
 
-function theme_scripts() { 
+function simple_bootstrap_theme_scripts() { 
     // For child themes
     wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.css', array(), null, 'all' );
     wp_enqueue_style( 'wpbs-style' );
@@ -39,7 +39,7 @@ function theme_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'simple_bootstrap_theme_scripts' );
 
 
 // Set content width
@@ -47,10 +47,10 @@ if ( ! isset( $content_width ) )
     $content_width = 750;
 
 // Thumbnail sizes
-add_image_size( 'wpbs-featured', 1140, 1140 * (9 / 21), true);
+add_image_size( 'simple_boostrap_featured', 1140, 1140 * (9 / 21), true);
 
 // Sidebar and Footer declaration
-function wp_bootstrap_register_sidebars() {
+function simple_boostrap_register_sidebars() {
     register_sidebar(array(
         'id' => 'sidebar-right',
         'name' => 'Right Sidebar',
@@ -80,10 +80,10 @@ function wp_bootstrap_register_sidebars() {
     ));
     
 }
-add_action( 'widgets_init', 'wp_bootstrap_register_sidebars' );
+add_action( 'widgets_init', 'simple_boostrap_register_sidebars' );
 
 // Menu output mods
-class Bootstrap_walker extends Walker_Nav_Menu{
+class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu{
 
     function start_el(&$output, $object, $depth = 0, $args = Array(), $current_object_id = 0) {
 
@@ -146,18 +146,18 @@ class Bootstrap_walker extends Walker_Nav_Menu{
 }
 
 // Add Twitter Bootstrap's standard 'active' class name to the active nav link item
-function add_active_class($classes, $item) {
+function simple_bootstrap_add_active_class($classes, $item) {
     if( in_array('current-menu-item', $classes) ) {
         $classes[] = "active";
     }
   
     return $classes;
 }
-add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
+add_filter('nav_menu_css_class', 'simple_bootstrap_add_active_class', 10, 2 );
 
 // display the main menu bootstrap-style
 // this menu is limited to 2 levels (that's a bootstrap limitation)
-function display_main_menu() {
+function simple_bootstrap_display_main_menu() {
     if ( has_nav_menu("main_nav") ) {
         wp_nav_menu(
             array( 
@@ -166,7 +166,7 @@ function display_main_menu() {
                 'menu_class' => 'nav navbar-nav',
                 'container' => false, /* container class */
                 'depth' => 2,
-                'walker' => new Bootstrap_walker(),
+                'walker' => new simple_bootstrap_Bootstrap_walker(),
             )
         );
     }
@@ -175,7 +175,7 @@ function display_main_menu() {
 /*
   A function used in multiple places to generate the metadata of a post.
 */
-function display_post_meta() {
+function simple_bootstrap_display_post_meta() {
 ?>
 
     <ul class="meta text-muted list-inline">
@@ -205,7 +205,7 @@ function display_post_meta() {
 <?php
 }
 
-function page_navi() {
+function simple_boostrap_page_navi() {
     global $wp_query;
 
     ?>
@@ -222,7 +222,7 @@ function page_navi() {
     <?php
 }
 
-function display_post($multiple_on_page) { ?>
+function simple_boostrap_display_post($multiple_on_page) { ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class("block"); ?> role="article">
         
@@ -241,14 +241,14 @@ function display_post($multiple_on_page) { ?>
             <?php if (has_post_thumbnail()) { ?>
             <div class="featured-image">
                 <?php if ($multiple_on_page) : ?>
-                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('wpbs-featured'); ?></a>
+                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('simple_boostrap_featured'); ?></a>
                 <?php else: ?>
-                <?php the_post_thumbnail('wpbs-featured'); ?>
+                <?php the_post_thumbnail('simple_boostrap_featured'); ?>
                 <?php endif ?>
             </div>
             <?php } ?>
 
-            <?php display_post_meta() ?>
+            <?php simple_bootstrap_display_post_meta() ?>
         
         </header>
     
@@ -271,7 +271,7 @@ function display_post($multiple_on_page) { ?>
 
 <?php }
 
-function main_classes() {
+function simple_boostrap_main_classes() {
     $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
     $classes = "";
     if ($nbr_sidebars == 0) {
@@ -286,12 +286,12 @@ function main_classes() {
     }
     echo $classes;
 }
-function sidebar_left_classes() {
+function simple_boostrap_sidebar_left_classes() {
     $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
     echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4).' col-md-pull-'.($nbr_sidebars == 2 ? 6 : 8);
 
 }
-function sidebar_right_classes() {
+function simple_boostrap_sidebar_right_classes() {
     $nbr_sidebars = (is_active_sidebar( 'sidebar-left' ) ? 1 : 0) + (is_active_sidebar( 'sidebar-right' ) ? 1 : 0);
     echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4);
 }
