@@ -18,7 +18,7 @@ function simple_boostrap_theme_support() {
     add_theme_support( 'title-tag' );
     register_nav_menus(                      // wp3+ menus
         array( 
-            'main_nav' => 'Main Menu',   // main nav in header
+            'main_nav' => __('Main Menu', 'simple-bootstrap'),   // main nav in header
         )
     );
     add_image_size( 'simple_boostrap_featured', 1140, 1140 * (9 / 21), true);
@@ -57,8 +57,8 @@ if ( ! isset( $content_width ) )
 function simple_boostrap_register_sidebars() {
     register_sidebar(array(
         'id' => 'sidebar-right',
-        'name' => 'Right Sidebar',
-        'description' => 'Used on every page.',
+        'name' => __('Right Sidebar', 'simple-bootstrap'),
+        'description' => __('Used on every page.', 'simple-bootstrap'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
@@ -66,8 +66,8 @@ function simple_boostrap_register_sidebars() {
     ));
     register_sidebar(array(
     	'id' => 'sidebar-left',
-    	'name' => 'Left Sidebar',
-    	'description' => 'Used on every page.',
+    	'name' => __('Left Sidebar', 'simple-bootstrap'),
+    	'description' => __('Used on every page.', 'simple-bootstrap'),
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
@@ -76,7 +76,7 @@ function simple_boostrap_register_sidebars() {
     
     register_sidebar(array(
       'id' => 'footer1',
-      'name' => 'Footer',
+      'name' => __('Footer', 'simple-bootstrap'),
       'before_widget' => '<div id="%1$s" class="widget col-xs-6 col-sm-4 col-md-3 %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4 class="widgettitle">',
