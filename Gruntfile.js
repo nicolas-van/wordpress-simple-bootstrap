@@ -2,6 +2,12 @@
 
 module.exports = function(grunt) {
 
+  var jsFiles = [
+    "bower_components/respond/dest/respond.src.js",
+    "bower_components/html5shiv/dist/html5shiv.js",
+    "bower_components/bootstrap/dist/js/bootstrap.js",
+  ];
+
   grunt.initConfig({
     less: {
       dev: {
@@ -42,9 +48,13 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      main: {
+      js: {
         files: [
-          // includes files within path
+          {expand: true, flatten: true, src: jsFiles, dest: 'js/'},
+        ],
+      },
+      fonts: {
+        files: [
           {expand: true, flatten: true, src: ['bower_components/bootstrap/dist/fonts/*'], dest: 'fonts/'},
         ],
       },
@@ -81,7 +91,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
-  grunt.registerTask('make', ['less', 'uglify', 'copy']);
+  grunt.registerTask('make', ['less', 'uglify', 'copy:fonts', 'copy:js']);
   grunt.registerTask('dist', ['make', 'compress']);
   grunt.registerTask('watcher', ['make', 'watch']);
 
