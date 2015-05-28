@@ -162,18 +162,16 @@ add_filter('nav_menu_css_class', 'simple_bootstrap_add_active_class', 10, 2 );
 // display the main menu bootstrap-style
 // this menu is limited to 2 levels (that's a bootstrap limitation)
 function simple_bootstrap_display_main_menu() {
-    if ( has_nav_menu("main_nav") ) {
-        wp_nav_menu(
-            array( 
-                'theme_location' => 'main_nav', /* where in the theme it's assigned */
-                'menu' => 'main_nav', /* menu name */
-                'menu_class' => 'nav navbar-nav',
-                'container' => false, /* container class */
-                'depth' => 2,
-                'walker' => new simple_bootstrap_Bootstrap_walker(),
-            )
-        );
-    }
+    wp_nav_menu(
+        array( 
+            'theme_location' => 'main_nav', /* where in the theme it's assigned */
+            'menu' => 'main_nav', /* menu name */
+            'menu_class' => 'nav navbar-nav',
+            'container' => false, /* container class */
+            'depth' => 2,
+            'walker' => new simple_bootstrap_Bootstrap_walker(),
+        )
+    );
 }
 
 /*

@@ -23,3 +23,8 @@ Simple Boostrap is bundled with:
 - jQuery (Copyright 2014 jQuery Foundation, released under terms of the MIT license)
 - Respond.js (Copyright 2011: Scott Jehl, released under terms of the MIT license)
 - Html5shiv (Copyright Alexander Farkas, Jonathan Neal, Paul Irish and John-David Dalton, released under terms of the MIT license)
+
+Images displayed in the screenshot:
+
+- Toronto by Greg Knapp ( Attribution 2.0 Generic (CC BY 2.0) - https://www.flickr.com/photos/g4egk/4814248153/in/pool-free_for_commercial_use/ )
+- hipster desktop office by markus spiske ( Attribution 2.0 Generic (CC BY 2.0) - https://www.flickr.com/photos/markusspiske/14348832016/in/pool-free_for_commercial_use/ )

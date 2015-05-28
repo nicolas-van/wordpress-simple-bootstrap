@@ -18,21 +18,25 @@
 				<div class="container">
 		  
 					<div class="navbar-header">
+						<?php if (has_nav_menu("main_nav")): ?>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-responsive-collapse">
 		    				<span class="sr-only"><?php _e('Navigation', 'default'); ?></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
+						<?php endif ?>
 						<a class="navbar-brand" title="<?php bloginfo('description'); ?>" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 					</div>
 
+					<?php if (has_nav_menu("main_nav")): ?>
 					<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
 						<?php
 						    simple_bootstrap_display_main_menu();
 						?>
 
 					</div>
+					<?php endif ?>
 
 				</div>
 			</nav>
