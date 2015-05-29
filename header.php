@@ -20,7 +20,7 @@
 					<div class="navbar-header">
 						<?php if (has_nav_menu("main_nav")): ?>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-responsive-collapse">
-		    				<span class="sr-only"><?php _e('Navigation', 'default'); ?></span>
+		    				<span class="sr-only"><?php _e('Navigation', 'simple-bootstrap'); ?></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>

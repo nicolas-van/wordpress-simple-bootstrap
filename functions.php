@@ -197,11 +197,11 @@ function simple_bootstrap_display_post_meta() {
         <li>
             <?php
                 $sp = '<span class="glyphicon glyphicon-comment"></span> ';
-                comments_popup_link($sp . __( 'Leave a comment', "default"), $sp . __( '1 Comment', "default"), $sp . __( '% Comments', "default"));
+                comments_popup_link($sp . __( 'Leave a comment', "simple-bootstrap"), $sp . __( '1 Comment', "simple-bootstrap"), $sp . __( '% Comments', "simple-bootstrap"));
             ?>
         </li>
         <?php endif; ?>
-        <?php edit_post_link(__( 'Edit', "default"), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
+        <?php edit_post_link(__( 'Edit', "simple-bootstrap"), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
     </ul>
 
 <?php
@@ -215,8 +215,8 @@ function simple_boostrap_page_navi() {
     <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
         <nav class="block">
             <ul class="pager pager-unspaced">
-                <li class="previous"><?php next_posts_link("&laquo; " . __('Older posts', "default")); ?></li>
-                <li class="next"><?php previous_posts_link(__('Newer posts', "default") . " &rsquo;"); ?></li>
+                <li class="previous"><?php next_posts_link("&laquo; " . __('Older posts', "simple-bootstrap")); ?></li>
+                <li class="next"><?php previous_posts_link(__('Newer posts', "simple-bootstrap") . " &rsquo;"); ?></li>
             </ul>
         </nav>
     <?php } ?>
