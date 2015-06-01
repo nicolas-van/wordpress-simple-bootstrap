@@ -26,5 +26,5 @@ Simple Boostrap is bundled with:
 
 Images displayed in the screenshot:
 
-- Toronto by Greg Knapp ( Attribution 2.0 Generic (CC BY 2.0) - https://www.flickr.com/photos/g4egk/4814248153/in/pool-free_for_commercial_use/ )
-- hipster desktop office by markus spiske ( Attribution 2.0 Generic (CC BY 2.0) - https://www.flickr.com/photos/markusspiske/14348832016/in/pool-free_for_commercial_use/ )
+- After the Rain by Jarosław Puszczyński ( CC0 - https://tookapic.com/jpuszczynski/15186-after-the-rain )
+- SUP weekend by tania ( CC0 - https://tookapic.com/tania/15159-sup-weekend )
