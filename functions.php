@@ -216,7 +216,7 @@ function simple_boostrap_page_navi() {
         <nav class="block">
             <ul class="pager pager-unspaced">
                 <li class="previous"><?php next_posts_link("&laquo; " . __('Older posts', "default")); ?></li>
-                <li class="next"><?php previous_posts_link(__('Newer posts', "default") . " &rsquo;"); ?></li>
+                <li class="next"><?php previous_posts_link(__('Newer posts', "default") . " &raquo;"); ?></li>
             </ul>
         </nav>
     <?php } ?>
