@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simple-bootstrap\n"
-"POT-Creation-Date: 2015-10-20 09:47+0100\n"
-"PO-Revision-Date: 2015-10-20 09:54+0100\n"
+"POT-Creation-Date: 2015-10-20 09:56+0100\n"
+"PO-Revision-Date: 2015-10-20 09:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -117,10 +117,8 @@ msgid "Search for:"
 msgstr "Rechercher:"
 
 #: footer.php:12
-msgid ""
-"Copyright 2015 <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
-msgstr ""
-"Copyright 2015 <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
+msgid "Design by <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
+msgstr "Design par <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
 
 #: footer.php:13
 msgid "Powered by WordPress"
