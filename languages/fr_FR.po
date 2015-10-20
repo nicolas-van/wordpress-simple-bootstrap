@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-bootstrap\n"
 "POT-Creation-Date: 2015-10-20 09:47+0100\n"
-"PO-Revision-Date: 2015-10-20 09:47+0100\n"
+"PO-Revision-Date: 2015-10-20 09:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -16,113 +16,116 @@ msgstr ""
 
 #: page.php:18 page-full-width.php:24
 msgid "No pages found."
-msgstr ""
+msgstr "Aucune page trouvée."
 
 #: searchform.php:4 searchform.php:6
 msgid "Search"
-msgstr ""
+msgstr "Recherche"
 
 #: functions.php:21
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: functions.php:60
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Sidebar de droite"
 
 #: functions.php:61 functions.php:70
 msgid "Used on every page."
-msgstr ""
+msgstr "Utilisé sur toutes les pages."
 
 #: functions.php:69
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Sidebar de gauche"
 
 #: functions.php:79
 msgid "Footer"
-msgstr ""
+msgstr "Footer"
 
 #: functions.php:200
 msgid "Leave a comment"
-msgstr ""
+msgstr "Laissez un commentaire"
 
 #: functions.php:200
 msgid "1 Comment"
-msgstr ""
+msgstr "1 commentaire"
 
 #: functions.php:200
 msgid "% Comments"
-msgstr ""
+msgstr "% commentaires"
 
 #: functions.php:204
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: functions.php:218
 msgid "Older posts"
-msgstr ""
+msgstr "Articles plus anciens"
 
 #: functions.php:219
 msgid "Newer posts"
-msgstr ""
+msgstr "Articles plus récents"
 
 #: image.php:52
 msgid "&laquo; Previous"
-msgstr ""
+msgstr "&laquo; Précédent"
 
 #: image.php:53
 msgid "Next &raquo;"
-msgstr ""
+msgstr "Suivant &raquo;"
 
 #: image.php:66 archive.php:26 search.php:26 attachment.php:18
 msgid "No items found."
-msgstr ""
+msgstr "Aucun élément trouvé."
 
 #: index.php:20 single.php:27
 msgid "No posts found."
-msgstr ""
+msgstr "Aucun article trouvé."
 
 #: comments.php:5
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
+"Cet article est protégé par un mot de passe. Entrez le mot de passe pour "
+"voir les commentaires."
 
 #: comments.php:17
 msgid "Comments"
-msgstr ""
+msgstr "Commentaires"
 
 #: comments.php:30
 msgid "&laquo; Older Comments"
-msgstr ""
+msgstr "&laquo; Commentaires plus anciens"
 
 #: comments.php:31
 msgid "Newer Comments &raquo;"
-msgstr ""
+msgstr "Commentaires plus récents &raquo;"
 
 #: single.php:16
 msgid "Previous Post"
-msgstr ""
+msgstr "Article précédent"
 
 #: single.php:17
 msgid "Next Post"
-msgstr ""
+msgstr "Article suivant"
 
 #: 404.php:12
 msgid "Page not found"
-msgstr ""
+msgstr "Page non trouvée"
 
 #: search.php:8
 msgid "Search for:"
-msgstr ""
+msgstr "Rechercher:"
 
 #: footer.php:12
 msgid ""
 "Copyright 2015 <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
 msgstr ""
+"Copyright 2015 <a href=\"https://github.com/nicolas-van\">@nicolas-van</a>"
 
 #: footer.php:13
 msgid "Powered by WordPress"
-msgstr ""
+msgstr "Propulsé par Wordpress"
 
 #: header.php:23
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
