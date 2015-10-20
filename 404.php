@@ -9,7 +9,7 @@
 			<section class="post_content">
 				
 				<p>
-					<?php _e("Page not found", "default"); ?>
+					<?php _e("Page not found", "simple-bootstrap"); ?>
 				</p>
 				<?php get_search_form(); ?>
 		

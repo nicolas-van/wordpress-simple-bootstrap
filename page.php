@@ -15,7 +15,7 @@
 		<?php else : ?>
 		
 		<article id="post-not-found" class="block">
-		    <p><?php _e("No pages found.", "default"); ?></p>
+		    <p><?php _e("No pages found.", "simple-bootstrap"); ?></p>
 		</article>
 		
 		<?php endif; ?>

@@ -49,8 +49,8 @@ get_header(); ?>
 
 			<nav>
 			  	<ul class="pager">
-			    	<li class="previous"><?php next_image_link( false, __( '&laquo; Previous', "default")); ?></li>
-			    	<li class="next"><?php previous_image_link( false, __( 'Next &raquo;', "default")); ?></li>
+			    	<li class="previous"><?php next_image_link( false, __( '&laquo; Previous', "simple-bootstrap")); ?></li>
+			    	<li class="next"><?php previous_image_link( false, __( 'Next &raquo;', "simple-bootstrap")); ?></li>
 			  	</ul>
 			</nav>
 		
@@ -63,7 +63,7 @@ get_header(); ?>
 		<?php else : ?>
 		
 		<article id="post-not-found" class="block">
-		    <p><?php _e("No items found.", "default"); ?></p>
+		    <p><?php _e("No items found.", "simple-bootstrap"); ?></p>
 		</article>
 		
 		<?php endif; ?>

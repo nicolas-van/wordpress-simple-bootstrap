@@ -13,8 +13,8 @@
 		<?php if (get_next_post() || get_previous_post()) { ?>
 		<nav class="block">
 			<ul class="pager pager-unspaced">
-				<li class="previous"><?php previous_post_link('%link', "&laquo; " . __( 'Previous Post', "default")); ?></li>
-				<li class="next"><?php next_post_link('%link', __( 'Next Post', "default") . " &raquo;"); ?></li>
+				<li class="previous"><?php previous_post_link('%link', "&laquo; " . __( 'Previous Post', "simple-bootstrap")); ?></li>
+				<li class="next"><?php next_post_link('%link', __( 'Next Post', "simple-bootstrap") . " &raquo;"); ?></li>
 			</ul>
 		</nav>
 		<?php } ?>
@@ -24,7 +24,7 @@
 		<?php else : ?>
 		
 		<article id="post-not-found" class="block">
-		    <p><?php _e("No posts found.", "default"); ?></p>
+		    <p><?php _e("No posts found.", "simple-bootstrap"); ?></p>
 		</article>
 		
 		<?php endif; ?>
