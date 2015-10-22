@@ -9,8 +9,6 @@ npm install
 bower install
 grunt
 
-This theme was inspired by wp-bootstrap: https://github.com/320press/wordpress-bootstrap
-
 Copyright 2015 Nicolas Vanhoren
 Released under the terms of the MIT license.
 
