@@ -23,3 +23,7 @@ Images displayed in the screenshot:
 
 - After the Rain by Jarosław Puszczyński ( CC0 - https://tookapic.com/jpuszczynski/15186-after-the-rain )
 - SUP weekend by tania ( CC0 - https://tookapic.com/tania/15159-sup-weekend )
+
+Image used as default background:
+
+- Unnamed image by Kent Henderson ( CC0 - https://unsplash.com/photos/5yOefHJEaGw )
