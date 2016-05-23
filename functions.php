@@ -19,6 +19,12 @@ function simple_boostrap_theme_support() {
         'default-position-x' => 'center',
         'default-attachment' => 'fixed',
     ));
+    add_theme_support('custom-header', [
+        'flex-width'    => true,
+        'width'         => 1366,
+        'flex-height'    => true,
+        'height'        => 350,
+    ]);
     add_theme_support( 'title-tag' );
     register_nav_menus(                      // wp3+ menus
         array( 
