@@ -339,5 +339,28 @@ body {
     margin-bottom: @navbar-margin-bottom;
     background-position: top center;
     background-size: cover;
-    height: 350px;
+    min-height: 350px;
+    text-align: center;
+    
+    @media (max-width: @screen-md-max) {
+        min-height: 300px;
+    }
+    
+    @media (max-width: @screen-sm-max) {
+        min-height: 250px;
+    }
+    
+    @media (max-width: @screen-xs-max) {
+        min-height: 200px;
+    }
+}
+
+.site-title {
+    .h1();
+    font-weight: bold;
+}
+
+.site-description {
+    .h3();
+    font-weight: bold;
 }

@@ -42,11 +42,15 @@
 			</nav>
 		</header>
 
-        <?php if (get_header_image() != ""): ?>
+        <?php if (has_header_image()): ?>
         <div class="header-image-container">
             <div class="header-image" style="background-image: url(<?php echo get_header_image(); ?>)">
-                <h1 class="site-title"><?php bloginfo('name') ?></h1>
-                <h2 class="site-description"><?php bloginfo('description') ?></h2>
+                <div class="container">
+                    <?php if (display_header_text()): ?>
+                    <div class="site-title" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo('name') ?></div>
+                    <div class="site-description" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo('description') ?></div>
+                    <?php endif ?>
+                </div>
             </div>
         </div>
         <?php endif ?>
