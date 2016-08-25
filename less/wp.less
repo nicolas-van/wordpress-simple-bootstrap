@@ -23,6 +23,11 @@
     padding: @block-padding @block-padding (@block-padding - @padding-base-vertical) @block-padding;
     margin-bottom: 30px;
     box-shadow: @block-shadow;
+    
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    
     &.block-title {
         padding-top: (@block-padding - @padding-base-vertical);
         padding-bottom: @block-padding;
@@ -35,6 +40,11 @@
 
     header {
         .link-without-style();
+        
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        
         .meta {
             .link-without-style();
             margin-bottom: 20px;
@@ -43,6 +53,7 @@
 
     section {
         .clearfix();
+        
         img {
             .img-responsive();
             .img-thumbnail();
