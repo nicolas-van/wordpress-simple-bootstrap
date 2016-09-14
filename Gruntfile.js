@@ -24,17 +24,6 @@ module.exports = function(grunt) {
         files: "less/**.less",
         tasks: ['less']
       },
-      cssmin: {
-        files: ["style.css"],
-        tasks: ['cssmin'],
-      },
-    },
-    cssmin: {
-      dist: {
-        files: {
-          'style.min.css': "style.css",
-        }
-      },
     },
     uglify: {
       dist: {
@@ -85,7 +74,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
