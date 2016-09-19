@@ -33,7 +33,7 @@ function simple_boostrap_theme_support() {
             'main_nav' => __('Main Menu', 'simple-bootstrap'),   // main nav in header
         )
     );
-    add_image_size( 'simple_boostrap_featured', 1140, 1140 * (9 / 21), true);
+    add_image_size( 'simple_boostrap_featured', 1920, 1920 * (9 / 21), true);
     load_theme_textdomain( 'simple-bootstrap', get_template_directory() . '/languages' );
 }
 add_action('after_setup_theme','simple_boostrap_theme_support');
