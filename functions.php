@@ -286,27 +286,29 @@ function simple_boostrap_display_post($multiple_on_page) { ?>
 <?php }
 
 function simple_boostrap_main_classes() {
-    $nbr_sidebars = (is_active_sidebar('sidebar-left') ? 1 : 0) + (is_active_sidebar('sidebar-right') ? 1 : 0);
-    $classes = "";
-    if ($nbr_sidebars == 0) {
-        $classes .= "col-sm-8 col-md-push-2";
-    } else if ($nbr_sidebars == 1) {
-        $classes .= "col-md-8";
-    } else {
-        $classes .= "col-md-6";
+    if (! is_active_sidebar('sidebar-left') && ! is_active_sidebar('sidebar-right')) { // no columns
+        echo "col-md-8 col-md-push-2";
+    } else if (! is_active_sidebar('sidebar-right')) { // only left
+        echo "col-md-8 col-md-push-4";
+    } else if (! is_active_sidebar('sidebar-left')) { // only right
+        echo "col-md-8";
+    } else { // both columns
+        echo "col-md-6 col-md-push-3";
     }
-    if (is_active_sidebar( 'sidebar-left' )) {
-        $classes .= " col-md-push-".($nbr_sidebars == 2 ? 3 : 4);
-    }
-    echo $classes;
 }
 
 function simple_boostrap_sidebar_left_classes() {
-    $nbr_sidebars = (is_active_sidebar('sidebar-left') ? 1 : 0) + (is_active_sidebar('sidebar-right') ? 1 : 0);
-    echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4).' col-md-pull-'.($nbr_sidebars == 2 ? 6 : 8);
+    if (! is_active_sidebar('sidebar-right')) { // only left
+        echo 'col-md-4 col-md-pull-8';
+    } else { // both columns
+        echo 'col-md-3 col-md-pull-6';
+    }
 }
 
 function simple_boostrap_sidebar_right_classes() {
-    $nbr_sidebars = (is_active_sidebar('sidebar-left') ? 1 : 0) + (is_active_sidebar('sidebar-right') ? 1 : 0);
-    echo 'col-md-'.($nbr_sidebars == 2 ? 3 : 4);
+    if (! is_active_sidebar('sidebar-left')) { // only right
+        echo 'col-md-4';
+    } else { // both columns
+        echo 'col-md-3';
+    }
 }
