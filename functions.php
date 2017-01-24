@@ -13,7 +13,7 @@ function simple_boostrap_theme_support() {
     set_post_thumbnail_size(125, 125, true);   // default thumb size
     add_theme_support('automatic-feed-links'); // rss thingy
     add_theme_support('custom-background', array(
-        'default-color' => '#282828',
+        'default-color' => '#5b5b5b',
         'default-repeat' => 'no-repeat',
         'default-position-x' => 'center',
         'default-attachment' => 'fixed',
