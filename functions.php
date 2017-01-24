@@ -25,7 +25,6 @@ function simple_boostrap_theme_support() {
         'height' => 350,
         'header-text' => true,
         'default-text-color' => 'ffffff',
-        'default-image' => get_template_directory_uri() . '/default-header.jpg',
     ]);
     add_theme_support( 'title-tag' );
     register_nav_menus(                      // wp3+ menus
