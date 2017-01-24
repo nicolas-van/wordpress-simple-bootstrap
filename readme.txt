@@ -12,6 +12,11 @@ grunt
 Copyright 2015 Nicolas Vanhoren
 Released under the terms of the MIT license.
 
+Supported browsers:
+
+- IE up to IE8
+- Latest version of all other major browsers
+
 Simple Boostrap is bundled with:
 
 - Bootstrap (Copyright 2015 Twitter, released under the terms of the MIT license)
