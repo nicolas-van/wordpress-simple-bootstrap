@@ -18,14 +18,14 @@ function simple_boostrap_theme_support() {
         'default-position-x' => 'center',
         'default-attachment' => 'fixed',
     ));
-    add_theme_support('custom-header', [
+    add_theme_support('custom-header', array(
         'flex-width' => true,
         'width' => 1366,
         'flex-height' => true,
         'height' => 350,
         'header-text' => true,
         'default-text-color' => 'ffffff',
-    ]);
+    ));
     add_theme_support( 'title-tag' );
     register_nav_menus(                      // wp3+ menus
         array( 
