@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       },
       readme: {
         files: [
-          {src: 'README.md', dest: 'README.txt'},
+          {src: 'README.md', dest: 'readme.txt'},
         ],
       },
     },
