@@ -23,6 +23,7 @@ app.min.js
 codekit-config.json
 node_modules
 style.css
+style.css.map
 fonts
 simple-bootstrap.zip
 js

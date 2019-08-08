@@ -1,0 +1,373 @@
+/*
+    This file defines a lot of style necessary to make Wordpress work
+    correctly.
+
+    It is not recommended to edit it unless you know exactly what you
+    are doing.
+*/
+
+.link-without-style() {
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover, &:focus {
+            text-decoration: none;
+            color: @link-hover-color;
+        }
+    }
+}
+
+.block {
+    background-color: @block-bg;
+    border-radius: @block-border-radius;
+    padding: @block-padding @block-padding (@block-padding - @padding-base-vertical) @block-padding;
+    margin-bottom: 30px;
+    box-shadow: @block-shadow;
+    
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    
+    &.block-title {
+        padding-top: (@block-padding - @padding-base-vertical);
+        padding-bottom: @block-padding;
+    }
+}
+
+/* post styling */
+
+#main>article {
+
+    header {
+        .link-without-style();
+        
+        .meta {
+            .link-without-style();
+            margin-bottom: 20px;
+        }
+    }
+
+    section {
+        .clearfix();
+        
+        img {
+            .img-responsive();
+            .img-thumbnail();
+
+            &.alignleft {
+                .pull-left();
+                margin-right: 10px;
+            }
+
+            &.alignright {
+                .pull-right();
+                margin-left: 10px;
+            }
+
+            &.aligncenter {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .wp-video {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.tags {
+    a {
+        .label;
+        .label-default;
+    }
+}
+
+/* comments */
+
+#comments {
+    .block();
+}
+
+.commentlist {
+    .list-unstyled();
+
+    .children {
+        .list-unstyled();
+        margin-left: 20px;
+    }
+
+    .comment-body {
+        padding: 30px 0;
+        border-bottom: 1px solid @hr-border;
+
+        .edit-link a {
+            &::before {
+                content: "\270f";
+                .glyphicon();
+                padding-right: 3px;
+            }
+            .text-muted();
+            text-decoration: none;
+            &:hover, &:focus {
+                text-decoration: none;
+                color: @link-hover-color;
+            }
+        }
+    }
+
+    .comment .comment-body {
+        &>* {
+            padding-left: 50px;
+            position: relative;
+            .avatar {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 2px;
+                position: absolute;
+                left: 0;
+                height: 34px;
+                top: 2px;
+                width: 34px;
+            }
+        }
+        .comment-author {
+            margin-bottom: 5px;
+            .link-without-style();
+            .fn {
+                font-weight: bold;
+            }
+        }
+        .comment-metadata {
+            margin-bottom: 5px;
+            .link-without-style();
+            .text-muted();
+
+            &>a {
+                &::before {
+                    content: "\e023";
+                    .glyphicon();
+                    padding-right: 3px;
+                }
+            }
+        }
+        .reply a {
+            &::before {
+                content: "\e095";
+                .glyphicon();
+                    padding-right: 3px;
+            }
+        }
+    }
+}
+
+.comment-navigation {
+    .list-inline();
+    &>li {
+        padding: 0px;
+        &>a {
+            padding: 0px 5px;
+        }
+    }
+}
+
+.comment-form {
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .comment-form-comment{
+        .form-group;
+
+        input,
+        textarea{
+            .form-control;
+        }
+
+        textarea{
+            height: auto;
+        }
+    }
+    .form-allowed-tags{
+        code{
+            white-space: normal;
+            color: @text-color;
+            background-color: transparent;
+        }
+    }
+    input[type='submit']{
+        .btn;
+        .btn-primary;
+    }
+}
+
+
+
+/* widget styles */
+
+.widget {
+    margin-bottom: 38px;
+    &:last-of-type {
+        margin-bottom: 18px;
+    }
+}
+
+.widgettitle {
+    margin-bottom: 9px;
+}
+
+.tagcloud {
+    a {
+        .label;
+        .label-default;
+    }
+}
+
+/* calendar widget */
+
+.widget_calendar {
+    >div {
+        .table-responsive();
+    }
+    table {
+        .table();
+        caption {
+            font-weight: bold;
+        }
+    }
+}
+
+/* widgets */
+
+.vertical-nav {
+    .widget ul {
+        .list-unstyled();
+        li {
+            .link-without-style();
+            padding: 5px 0;
+            border-bottom: 1px solid @hr-border;
+            &:last-of-type {
+                border-bottom: 0px;
+            }
+            ul {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+/* footer */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    height: 100%;
+}
+
+#content-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+    >* {
+        display: table-row;
+    }
+}
+
+#page-content {
+    height: 100%;
+}
+
+#inner-footer {
+    background-color: @footer-bg;
+    padding-top: @footer-padding;
+    padding-bottom: (@footer-padding - @padding-base-vertical);
+}
+
+/* featured image */
+
+.featured-image {
+    margin: -@line-height-computed -@block-padding @line-height-computed -@block-padding;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* gallery */
+
+.gallery {
+    .make-row();
+    .gallery-item {
+        .make-xs-column(6);
+        .make-sm-column(4);
+        .make-md-column(3);
+        padding-bottom: 15px;
+    }
+}
+
+/* a style used for all headers */
+
+.article-header {
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    margin-bottom: @line-height-computed;
+    border-bottom: 1px solid @page-header-border-color;
+    .has-post-thumbnail & {
+        border-bottom: none;
+    }
+}
+
+/* just a little style to remove spacing on the pager */
+
+.pager-unspaced {
+    margin: 0px 0px @padding-base-vertical 0px;
+}
+
+/* empty styles to please wordpress theme checker */
+
+.wp-caption {/**/}
+.wp-caption-text {/**/}
+.sticky {/**/}
+.gallery-caption {/**/}
+.bypostauthor {/**/}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.header-image {
+    margin-top: -@navbar-margin-bottom;
+    margin-bottom: @navbar-margin-bottom;
+    background-position: top center;
+    background-size: cover;
+    min-height: 350px;
+    text-align: center;
+    box-shadow: @block-shadow;
+    
+    @media (max-width: @screen-md-max) {
+        min-height: 300px;
+    }
+    
+    @media (max-width: @screen-sm-max) {
+        min-height: 250px;
+    }
+    
+    @media (max-width: @screen-xs-max) {
+        min-height: 200px;
+    }
+}
+
+.site-title {
+    .h1();
+    font-weight: bold;
+}
+
+.site-description {
+    .h3();
+    font-weight: bold;
+}

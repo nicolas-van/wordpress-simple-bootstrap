@@ -1,0 +1,20 @@
+/*
+Theme Name: Simple Bootstrap
+Theme URI: https://github.com/nicolas-van/wordpress-simple-bootstrap
+Description: Simple and clean Wordpress theme mostly aimed as a starting point for developers to build their own themes using Bootstrap
+Author: Nicolas Vanhoren
+Author URI: https://github.com/nicolas-van
+Version: 1.0.0
+Text Domain: simple-bootstrap
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-colors, custom-background, featured-images, translation-ready, custom-header, flexible-header, custom-menu, footer-widgets, blog
+.
+Licensed under the MIT license.
+.
+*/
+@import "bootstrap_variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "customization";
+@import "theme_customization";
+//@import "wp";
