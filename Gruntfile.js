@@ -47,6 +47,11 @@ module.exports = function(grunt) {
           {expand: true, flatten: true, src: ['node_modules/bootstrap/dist/fonts/*'], dest: 'fonts/'},
         ],
       },
+      readme: {
+        files: [
+          {src: 'README.md', dest: 'README.txt'},
+        ],
+      },
     },
     compress: {
       main: {
@@ -79,7 +84,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('make', ['less', 'uglify', 'copy:fonts', 'copy:js']);
-  grunt.registerTask('dist', ['make', 'compress']);
+  grunt.registerTask('dist', ['make', 'copy:readme', 'compress']);
   grunt.registerTask('watcher', ['make', 'watch']);
 
   grunt.registerTask('default', ['make']);
