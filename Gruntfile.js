@@ -3,9 +3,9 @@
 module.exports = function(grunt) {
 
   var jsFiles = [
-    "bower_components/respond/dest/respond.src.js",
-    "bower_components/html5shiv/dist/html5shiv.js",
-    "bower_components/bootstrap/dist/js/bootstrap.js",
+    "node_modules/respond.js/dest/respond.src.js",
+    "node_modules/html5shiv/dist/html5shiv.js",
+    "node_modules/bootstrap/dist/js/bootstrap.js",
   ];
 
   grunt.initConfig({
@@ -29,9 +29,9 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'app.min.js': [
-            "bower_components/respond/dest/respond.src.js",
-            "bower_components/html5shiv/dist/html5shiv.js",
-            "bower_components/bootstrap/dist/js/bootstrap.js",
+            "node_modules/respond.js/dest/respond.src.js",
+            "node_modules/html5shiv/dist/html5shiv.js",
+            "node_modules/bootstrap/dist/js/bootstrap.js",
           ],
         }
       }
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
       fonts: {
         files: [
-          {expand: true, flatten: true, src: ['bower_components/bootstrap/dist/fonts/*'], dest: 'fonts/'},
+          {expand: true, flatten: true, src: ['node_modules/bootstrap/dist/fonts/*'], dest: 'fonts/'},
         ],
       },
     },
@@ -59,7 +59,6 @@ module.exports = function(grunt) {
             dest: '/',
             filter: function(path) {
               if (/^simple-bootstrap.zip$/.test(path) ||
-                /^bower_components\b\/?/.test(path) ||
                 /^node_modules\b\/?/.test(path)
                 ) {
                 return false;

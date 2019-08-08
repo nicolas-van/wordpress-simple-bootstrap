@@ -8,8 +8,7 @@ Although it's not absolutely necessary it's recommended to edit the LESS files i
 
 ```
 npm install
-bower install
-grunt
+npm run build
 ```
 
 Copyright 2015 Nicolas Vanhoren

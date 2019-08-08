@@ -19,8 +19,8 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+app.min.js
 codekit-config.json
-bower_components
 node_modules
 style.css
 style.min.css
