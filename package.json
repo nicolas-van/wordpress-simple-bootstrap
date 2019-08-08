@@ -18,7 +18,9 @@
     "grunt-contrib-watch": "~0.6.1"
   },
   "scripts": {
-    "build": "grunt",
+    "build": "grunt make",
+    "dist": "grunt dist",
+    "dev": "grunt watcher",
     "test": "echo \"no test specified\" && exit 0"
   },
   "repository": {
