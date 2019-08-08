@@ -17,6 +17,11 @@ npm install
 npm run build
 ```
 
+## Links
+
+* [Theme page on Wordpress.org](https://wordpress.org/themes/simple-bootstrap/)
+* [Test this theme](https://wp-themes.com/simple-bootstrap/)
+
 ## Supported browsers
 
 - IE up to IE8
