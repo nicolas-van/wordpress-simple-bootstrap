@@ -8,20 +8,24 @@ It is build to very clean, responsive and easy to modify. It supports customizab
   <img src="./screenshot.png" width="500px">
 </p>
 
-Although it's not absolutely necessary it's recommended to edit the LESS files instead of directly editing the `style.css` . It will then be necessary to re-compile these files with the `Gruntfile.js`. Here are the lines you will have to type to do so (assuming you already have installed nodejs, bower and grunt-cli):
+## Extension guide
+
+Although it's not absolutely necessary it's recommended to edit the LESS files instead of directly editing the `style.css` . It will then be necessary to re-compile these files with the `Gruntfile.js`. Here are the lines you will have to type to do so (assuming you already have installed nodejs):
 
 ```
 npm install
 npm run build
 ```
 
-Copyright 2015 Nicolas Vanhoren
-Released under the terms of the MIT license.
-
-Supported browsers:
+## Supported browsers
 
 - IE up to IE8
 - Latest version of all other major browsers
+
+## Copyrights
+
+Copyright 2015 Nicolas Vanhoren
+Released under the terms of the MIT license.
 
 Simple Boostrap is bundled with:
 
