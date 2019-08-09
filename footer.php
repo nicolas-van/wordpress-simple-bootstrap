@@ -9,7 +9,7 @@
                         <?php dynamic_sidebar('footer1'); ?>
 
                         <div class="col-xs-12 text-center">
-                            <p><?php _e('Simple Bootstrap theme by <a href="https://github.com/nicolas-van">@nicolas-van</a>', 'simple-bootstrap') ?></p>
+                            <p><?php _e('<a href="http://nicolas-van.github.io/wordpress-simple-bootstrap/">Simple Bootstrap</a> theme by <a href="https://github.com/nicolas-van">@nicolas-van</a>', 'simple-bootstrap') ?></p>
                             <p><?php _e("Powered by WordPress", "simple-bootstrap"); ?></p>
                         </div>
                     </div>

@@ -5,7 +5,7 @@ Simple Bootstrap is a basic Wordpress theme using Boostrap 3, mostly aimed as a 
 
 It is build to very clean, responsive and easy to modify. It supports customizable background, image header and both left and right sidebars (the sidebars only appear if you put widgets in them).
 
-For documentation see the Github project: https://github.com/nicolas-van/wordpress-simple-bootstrap
+See here for documentation: http://nicolas-van.github.io/wordpress-simple-bootstrap/
 
 Copyright 2015 Nicolas Vanhoren
 Released under the terms of the MIT license.
