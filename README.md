@@ -1,32 +1,53 @@
 # Wordress Simple Bootstrap
 
+[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) ![WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/simple-bootstrap) ![WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/simple-bootstrap)
+
 Simple Bootstrap is a basic Wordpress theme using Boostrap 3, mostly aimed as a starting point for developers to build their own themes using Bootstrap.
 
 It is build to very clean, responsive and easy to modify. It supports customizable background, image header and both left and right sidebars (the sidebars only appear if you put widgets in them).
 
-Although it's not absolutely necessary it's recommended to edit the LESS files instead of directly editing the `style.css` . It will then be necessary to re-compile these files with the `Gruntfile.js`. Here are the lines you will have to type to do so (assuming you already have installed nodejs, bower and grunt-cli):
+<p align="center">
+  <img src="./screenshot.png" width="500px">
+</p>
+
+## Links
+
+* [Theme page on Wordpress.org](https://wordpress.org/themes/simple-bootstrap/)
+* [Test this theme](https://wp-themes.com/simple-bootstrap/)
+
+## Extension guide
+
+Let's state it clearly once and for all: trying to put some CSS above a pre-compiled Bootstrap is a very bad practice. The proper way to extend Bootstrap is to alter its behavior using [LESS](http://lesscss.org/) and to re-compile it. Here is how to do so.
+
+### Requirements
+
+* [node.js](https://nodejs.org/en/)
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Modify LESS files
+
+They are located in the `less` folder.
+
+### Compile LESS files
 
 ```
-npm install
 npm run build
 ```
 
-Copyright 2015 Nicolas Vanhoren
-Released under the terms of the MIT license.
-
-Supported browsers:
+## Supported browsers
 
 - IE up to IE8
 - Latest version of all other major browsers
 
-Simple Boostrap is bundled with:
+## How to contribute
 
-- Bootstrap (Copyright 2015 Twitter, released under the terms of the MIT license)
-- jQuery (Copyright 2014 jQuery Foundation, released under terms of the MIT license)
-- Respond.js (Copyright 2011: Scott Jehl, released under terms of the MIT license)
-- Html5shiv (Copyright Alexander Farkas, Jonathan Neal, Paul Irish and John-David Dalton, released under terms of the MIT license)
+[See the contribution guide](./CONTRIBUTING.md).
 
-Images displayed in the screenshot:
+## License
 
-- Unnamed image by Treza Trisnandhy ( CC0 - https://unsplash.com/photos/-09QE4q0ezw )
-- After the Rain by Jarosław Puszczyński ( CC0 - https://tookapic.com/jpuszczynski/15186-after-the-rain )
+[See the license file](./LICENSE.md).
