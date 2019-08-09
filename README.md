@@ -8,19 +8,34 @@ It is build to very clean, responsive and easy to modify. It supports customizab
   <img src="./screenshot.png" width="500px">
 </p>
 
-## Extension guide
-
-Although it's not absolutely necessary it's recommended to edit the LESS files instead of directly editing the `style.css` . It will then be necessary to re-compile these files with the `Gruntfile.js`. Here are the lines you will have to type to do so (assuming you already have installed nodejs):
-
-```
-npm install
-npm run build
-```
-
 ## Links
 
 * [Theme page on Wordpress.org](https://wordpress.org/themes/simple-bootstrap/)
 * [Test this theme](https://wp-themes.com/simple-bootstrap/)
+
+## Extension guide
+
+Let's state it clearly once and for all: trying to put some CSS above a pre-compiled Bootstrap is a very bad practice. The proper way to extend Bootstrap is to alter its behavior using [LESS](http://lesscss.org/) and to re-compile it. Here is how to do so.
+
+### Requirements
+
+* [node.js](https://nodejs.org/en/)
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Modify LESS files
+
+They are located in the `less` folder.
+
+### Compile LESS files
+
+```
+npm run build
+```
 
 ## Supported browsers
 
