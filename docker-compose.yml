@@ -1,13 +1,26 @@
-wordpress:
-  image: wordpress
-  links:
-    - db:mysql
-  ports:
-    - 8080:80
-  volumes:
-    - ./:/var/www/html/wp-content/themes/simple-bootstrap
+version: '3.1'
 
-db:
-  image: mariadb
-  environment:
-    MYSQL_ROOT_PASSWORD: example
+services:
+  wordpress:
+    image: wordpress:5.2
+    depends_on:
+      - db
+    ports:
+      - 8080:80
+    volumes:
+      - wordpress:/var/www/html
+      - ./:/var/www/html/wp-content/themes/simple-bootstrap
+
+  db:
+    image: mariadb:10
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: username
+      MYSQL_PASSWORD: password
+    volumes:
+      - datastore:/var/lib/mysql
+
+volumes:
+  wordpress:
+  datastore:
