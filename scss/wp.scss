@@ -6,31 +6,31 @@
     are doing.
 */
 
-.link-without-style() {
+@mixin link-without-style(){
     a {
         color: inherit;
         text-decoration: none;
         &:hover, &:focus {
             text-decoration: none;
-            color: @link-hover-color;
+            color: $link-hover-color;
         }
     }
 }
 
 .block {
-    background-color: @block-bg;
-    border-radius: @block-border-radius;
-    padding: @block-padding @block-padding (@block-padding - @padding-base-vertical) @block-padding;
+    background-color: $block-bg;
+    border-radius: $block-border-radius;
+    padding: $block-padding $block-padding ($block-padding - $spacer) $block-padding;
     margin-bottom: 30px;
-    box-shadow: @block-shadow;
+    box-shadow: $block-shadow;
     
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
     
     &.block-title {
-        padding-top: (@block-padding - @padding-base-vertical);
-        padding-bottom: @block-padding;
+        padding-top: ($block-padding - $spacer);
+        padding-bottom: $block-padding;
     }
 }
 
@@ -39,28 +39,27 @@
 #main>article {
 
     header {
-        .link-without-style();
+        @include link-without-style();
         
         .meta {
-            .link-without-style();
+            @include link-without-style();
             margin-bottom: 20px;
         }
     }
 
     section {
-        .clearfix();
+        @include clearfix();
         
         img {
-            .img-responsive();
-            .img-thumbnail();
+            @extend .img-thumbnail;
 
             &.alignleft {
-                .pull-left();
+                float: left;
                 margin-right: 10px;
             }
 
             &.alignright {
-                .pull-right();
+                float: right;
                 margin-left: 10px;
             }
 
@@ -79,40 +78,40 @@
 
 .tags {
     a {
-        .label;
-        .label-default;
+        @extend .badge;
+        @extend .badge-secondary;
     }
 }
 
 /* comments */
 
 #comments {
-    .block();
+    @extend .block;
 }
 
 .commentlist {
-    .list-unstyled();
+    @include list-unstyled();
 
     .children {
-        .list-unstyled();
+        @include list-unstyled();
         margin-left: 20px;
     }
 
     .comment-body {
         padding: 30px 0;
-        border-bottom: 1px solid @hr-border;
+        border-bottom: 1px solid $hr-border-color;
 
         .edit-link a {
             &::before {
                 content: "\270f";
-                .glyphicon();
+                // @include glyphicon();
                 padding-right: 3px;
             }
-            .text-muted();
+            @extend .text-muted;
             text-decoration: none;
             &:hover, &:focus {
                 text-decoration: none;
-                color: @link-hover-color;
+                color: $link-hover-color;
             }
         }
     }
@@ -133,20 +132,20 @@
         }
         .comment-author {
             margin-bottom: 5px;
-            .link-without-style();
+            @include link-without-style();
             .fn {
                 font-weight: bold;
             }
         }
         .comment-metadata {
             margin-bottom: 5px;
-            .link-without-style();
-            .text-muted();
+            @include link-without-style();
+            @extend .text-muted;
 
             &>a {
                 &::before {
                     content: "\e023";
-                    .glyphicon();
+                    // @include glyphicon();
                     padding-right: 3px;
                 }
             }
@@ -154,15 +153,15 @@
         .reply a {
             &::before {
                 content: "\e095";
-                .glyphicon();
-                    padding-right: 3px;
+                // @include glyphicon();
+                padding-right: 3px;
             }
         }
     }
 }
 
 .comment-navigation {
-    .list-inline();
+    @extend .list-inline;
     &>li {
         padding: 0px;
         &>a {
@@ -176,11 +175,11 @@
     .comment-form-email,
     .comment-form-url,
     .comment-form-comment{
-        .form-group;
+        @extend .form-group;
 
         input,
         textarea{
-            .form-control;
+            @extend .form-control;
         }
 
         textarea{
@@ -190,13 +189,13 @@
     .form-allowed-tags{
         code{
             white-space: normal;
-            color: @text-color;
+            color: $body-color;
             background-color: transparent;
         }
     }
     input[type='submit']{
-        .btn;
-        .btn-primary;
+        @extend .btn;
+        @extend .btn-primary;
     }
 }
 
@@ -217,8 +216,8 @@
 
 .tagcloud {
     a {
-        .label;
-        .label-default;
+        @extend .badge;
+        @extend .badge-secondary;
     }
 }
 
@@ -226,10 +225,10 @@
 
 .widget_calendar {
     >div {
-        .table-responsive();
+        @extend .table-responsive;
     }
     table {
-        .table();
+        @extend .table;
         caption {
             font-weight: bold;
         }
@@ -240,11 +239,11 @@
 
 .vertical-nav {
     .widget ul {
-        .list-unstyled();
+        @include list-unstyled();
         li {
-            .link-without-style();
+            @include link-without-style();
             padding: 5px 0;
-            border-bottom: 1px solid @hr-border;
+            border-bottom: 1px solid $hr-border-color;
             &:last-of-type {
                 border-bottom: 0px;
             }
@@ -280,15 +279,15 @@ body {
 }
 
 #inner-footer {
-    background-color: @footer-bg;
-    padding-top: @footer-padding;
-    padding-bottom: (@footer-padding - @padding-base-vertical);
+    background-color: $footer-bg;
+    padding-top: $footer-padding;
+    padding-bottom: ($footer-padding - $spacer);
 }
 
 /* featured image */
 
 .featured-image {
-    margin: -@line-height-computed -@block-padding @line-height-computed -@block-padding;
+    margin: -$spacer -$block-padding $spacer -$block-padding;
     img {
         width: 100%;
         height: auto;
@@ -298,11 +297,18 @@ body {
 /* gallery */
 
 .gallery {
-    .make-row();
+    @include make-row();
     .gallery-item {
-        .make-xs-column(6);
-        .make-sm-column(4);
-        .make-md-column(3);
+        @include make-col-ready();
+        @include media-breakpoint-up(xs) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(sm) {
+            @include make-col(4);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(3);
+        }
         padding-bottom: 15px;
     }
 }
@@ -310,9 +316,9 @@ body {
 /* a style used for all headers */
 
 .article-header {
-    padding-bottom: ((@line-height-computed / 2) - 1);
-    margin-bottom: @line-height-computed;
-    border-bottom: 1px solid @page-header-border-color;
+    padding-bottom: (($spacer / 2) - 1);
+    margin-bottom: $spacer;
+    border-bottom: 1px solid $hr-border-color;
     .has-post-thumbnail & {
         border-bottom: none;
     }
@@ -321,7 +327,7 @@ body {
 /* just a little style to remove spacing on the pager */
 
 .pager-unspaced {
-    margin: 0px 0px @padding-base-vertical 0px;
+    margin: 0px 0px $spacer 0px;
 }
 
 /* empty styles to please wordpress theme checker */
@@ -341,33 +347,31 @@ body {
 }
 
 .header-image {
-    margin-top: -@navbar-margin-bottom;
-    margin-bottom: @navbar-margin-bottom;
     background-position: top center;
     background-size: cover;
     min-height: 350px;
     text-align: center;
-    box-shadow: @block-shadow;
+    box-shadow: $block-shadow;
     
-    @media (max-width: @screen-md-max) {
+    @media (max-width: map-get($grid-breakpoints, 'lg') - 1px) {
         min-height: 300px;
     }
     
-    @media (max-width: @screen-sm-max) {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) {
         min-height: 250px;
     }
     
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: map-get($grid-breakpoints, 'sm') - 1px) {
         min-height: 200px;
     }
 }
 
 .site-title {
-    .h1();
+    @extend .h1;
     font-weight: bold;
 }
 
 .site-description {
-    .h3();
+    @extend .h3;
     font-weight: bold;
 }
