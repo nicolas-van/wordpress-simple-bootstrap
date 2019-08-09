@@ -88,7 +88,7 @@ function simple_boostrap_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer1',
       'name' => __('Footer', 'simple-bootstrap'),
-      'before_widget' => '<div id="%1$s" class="widget col-xs-6 col-sm-4 col-md-3 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-6 col-sm-4 col-md-3 %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',
@@ -192,27 +192,27 @@ function simple_bootstrap_display_post_meta() {
 ?>
 
     <ul class="meta text-muted list-inline">
-        <li>
+        <li class="list-inline-item">
             <a href="<?php the_permalink() ?>">
                 <span class="glyphicon glyphicon-time"></span>
                 <?php the_date(); ?>
             </a>
         </li>
-        <li>
+        <li class="list-inline-item">
             <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'));?>">
                 <span class="glyphicon glyphicon-user"></span>
                 <?php the_author(); ?>
             </a>
         </li>
         <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-        <li>
+        <li class="list-inline-item">
             <?php
                 $sp = '<span class="glyphicon glyphicon-comment"></span> ';
                 comments_popup_link($sp . __( 'Leave a comment', "simple-bootstrap"), $sp . __( '1 Comment', "simple-bootstrap"), $sp . __( '% Comments', "simple-bootstrap"));
             ?>
         </li>
         <?php endif; ?>
-        <?php edit_post_link(__( 'Edit', "simple-bootstrap"), '<li><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
+        <?php edit_post_link(__( 'Edit', "simple-bootstrap"), '<li class="list-inline-item"><span class="glyphicon glyphicon-pencil"></span> ', '</li>'); ?>
     </ul>
 
 <?php

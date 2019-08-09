@@ -163,6 +163,7 @@
 .comment-navigation {
     @extend .list-inline;
     &>li {
+        @extend .list-inline-item;
         padding: 0px;
         &>a {
             padding: 0px 5px;
@@ -266,15 +267,14 @@ body {
 }
 
 #content-wrapper {
-    display: table;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     width: 100%;
-    >* {
-        display: table-row;
-    }
 }
 
 #page-content {
+    @extend .pt-2;
     height: 100%;
 }
 
