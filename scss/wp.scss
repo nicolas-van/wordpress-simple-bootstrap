@@ -103,17 +103,17 @@
         border-bottom: 1px solid $hr-border-color;
 
         .edit-link a {
+            @extend .fa-pencil-alt;
             &::before {
-                content: "\270f";
-                // @include glyphicon();
+                @extend .fas;
                 padding-right: 3px;
             }
-            @extend .text-muted;
+            /*@extend .text-muted;
             text-decoration: none;
             &:hover, &:focus {
                 text-decoration: none;
                 color: $link-hover-color;
-            }
+            }*/
         }
     }
 
@@ -144,17 +144,17 @@
             @extend .text-muted;
 
             &>a {
+                @extend .fa-clock;
                 &::before {
-                    content: "\e023";
-                    // @include glyphicon();
+                    @extend .fas;
                     padding-right: 3px;
                 }
             }
         }
         .reply a {
+            @extend .fa-reply;
             &::before {
-                content: "\e095";
-                // @include glyphicon();
+                @extend .fas;
                 padding-right: 3px;
             }
         }

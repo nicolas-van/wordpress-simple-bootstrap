@@ -15,6 +15,12 @@ Licensed under the MIT license.
 */
 @import "bootstrap_variables";
 @import "node_modules/bootstrap/scss/bootstrap";
+$fa-font-path: "./fonts";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
+
 @import "customization";
 @import "theme_customization";
 @import "wp";

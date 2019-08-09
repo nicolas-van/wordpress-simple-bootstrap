@@ -4,6 +4,7 @@
   "description": "Basic Wordpress theme using Boostrap. Built to be very clean.",
   "main": "Gruntfile.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "bootstrap": "^4.3.1"
   },
   "devDependencies": {
@@ -12,7 +13,9 @@
     "sass": "^1.22.9"
   },
   "scripts": {
-    "build": "sass scss/style.scss style.css -I . && postcss style.css --use autoprefixer -r -m",
+    "build": "npm run copy-fonts && npm run build-sass",
+    "copy-fonts": "rm -rf ./fonts && cp -r node_modules/@fortawesome/fontawesome-free/webfonts ./fonts",
+    "build-sass": "sass scss/style.scss style.css -I . && postcss style.css --use autoprefixer -r -m",
     "dist": "grunt dist",
     "dev": "grunt watcher",
     "test": "echo \"no test specified\" && exit 0"
