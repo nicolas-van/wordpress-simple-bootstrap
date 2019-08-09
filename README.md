@@ -41,3 +41,11 @@ npm run build
 
 - IE up to IE8
 - Latest version of all other major browsers
+
+## How to contribute
+
+[See the contribution guide](./CONTRIBUTING.md).
+
+## License
+
+[See the license file](./LICENSE.md).
