@@ -28,6 +28,7 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    overflow-x: hidden;
     
     &.block-title {
         padding-top: ($block-padding - $spacer);
@@ -50,7 +51,12 @@
 
     section {
         @include clearfix();
-        
+        // deactivated until I test every possibilities with
+        // recent wordpress
+        img {
+            max-width: 100%;
+        }
+        /*
         img {
             @extend .img-thumbnail;
 
@@ -69,11 +75,11 @@
                 margin: 0 auto;
             }
         }
-
         .wp-video {
             margin-left: auto;
             margin-right: auto;
         }
+        */
     }
 }
 
