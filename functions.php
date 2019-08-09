@@ -195,7 +195,7 @@ function simple_bootstrap_display_post_meta() {
         <li class="list-inline-item">
             <a href="<?php the_permalink() ?>">
                 <i class="fas fa-clock"></i>
-                <?php the_date(); ?>
+                <?php echo get_the_date(); ?>
             </a>
         </li>
         <li class="list-inline-item">
