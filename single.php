@@ -12,7 +12,7 @@
 		
 		<?php if (get_next_post() || get_previous_post()) { ?>
 		<nav class="block">
-			<ul class="pager pager-unspaced">
+			<ul class="pager">
 				<li class="previous"><?php previous_post_link('%link', "&laquo; " . __( 'Previous Post', "simple-bootstrap")); ?></li>
 				<li class="next"><?php next_post_link('%link', __( 'Next Post', "simple-bootstrap") . " &raquo;"); ?></li>
 			</ul>

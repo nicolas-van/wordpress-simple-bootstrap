@@ -225,7 +225,7 @@ function simple_boostrap_page_navi() {
 
     <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
         <nav class="block">
-            <ul class="pager pager-unspaced">
+            <ul class="pager">
                 <li class="previous"><?php next_posts_link("&laquo; " . __('Older posts', "simple-bootstrap")); ?></li>
                 <li class="next"><?php previous_posts_link(__('Newer posts', "simple-bootstrap") . " &rsquo;"); ?></li>
             </ul>

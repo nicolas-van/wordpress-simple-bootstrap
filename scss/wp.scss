@@ -21,7 +21,8 @@
     background-color: $block-bg;
     border-radius: $block-border-radius;
     padding: $block-padding $block-padding ($block-padding - $spacer) $block-padding;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     box-shadow: $block-shadow;
     
     overflow-wrap: break-word;
@@ -274,8 +275,7 @@ body {
 }
 
 #page-content {
-    @extend .pt-2;
-    height: 100%;
+    flex-grow: 1;
 }
 
 #inner-footer {
@@ -324,10 +324,37 @@ body {
     }
 }
 
-/* just a little style to remove spacing on the pager */
+/* Port of Bootstrap 3's pager */
 
-.pager-unspaced {
-    margin: 0px 0px $spacer 0px;
+
+.pager {
+    list-style: none;
+    padding-left: 0;
+
+    @extend .clearfix;
+
+    li {
+        display: inline;
+        > a,
+        > span {
+            @extend .btn;
+            @extend .btn-secondary;
+        }
+    }
+  
+    .next {
+        > a,
+        > span {
+            float: right;
+        }
+    }
+  
+    .previous {
+        > a,
+        > span {
+            float: left;
+        }
+    }
 }
 
 /* empty styles to please wordpress theme checker */
