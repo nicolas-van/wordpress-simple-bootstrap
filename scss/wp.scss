@@ -36,6 +36,13 @@
     }
 }
 
+/* Global image styling */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* post styling */
 
 #main>article {
@@ -51,35 +58,36 @@
 
     section {
         @include clearfix();
-        // deactivated until I test every possibilities with
-        // recent wordpress
-        img {
-            max-width: 100%;
+
+        /* For retro-compatibility with non-Gutenberg users */
+
+        img.alignleft {
+            float: left;
+            margin-right: 10px;
         }
-        /*
-        img {
-            @extend .img-thumbnail;
 
-            &.alignleft {
-                float: left;
-                margin-right: 10px;
-            }
-
-            &.alignright {
-                float: right;
-                margin-left: 10px;
-            }
-
-            &.aligncenter {
-                display: block;
-                margin: 0 auto;
-            }
+        img.alignright {
+            float: right;
+            margin-left: 10px;
         }
-        .wp-video {
-            margin-left: auto;
+
+        img.aligncenter {
+            display: block;
             margin-right: auto;
+            margin-left: auto;
         }
-        */
+
+        /* To support align-wide */
+
+        .alignwide, .alignfull {
+            margin-left: (-$block-padding);
+            margin-right: (-$block-padding);
+            max-width: inherit;
+
+            &.wp-block-cover {
+                width: inherit;
+            }
+        }
     }
 }
 
