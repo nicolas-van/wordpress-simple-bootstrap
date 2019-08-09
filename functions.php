@@ -36,7 +36,6 @@ function simple_boostrap_theme_support() {
     load_theme_textdomain( 'simple-bootstrap', get_template_directory() . '/languages' );
 
     add_theme_support( 'wp-block-styles' );
-    add_theme_support( 'align-wide' );
     add_theme_support( 'responsive-embeds' );
 }
 add_action('after_setup_theme','simple_boostrap_theme_support');
