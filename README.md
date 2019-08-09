@@ -1,6 +1,6 @@
 # Wordress Simple Bootstrap
 
-[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap)
+[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) ![WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/simple-bootstrap) ![WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/simple-bootstrap)
 
 Simple Bootstrap is a basic Wordpress theme using Boostrap 3, mostly aimed as a starting point for developers to build their own themes using Bootstrap.
 
