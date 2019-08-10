@@ -3,48 +3,14 @@
 module.exports = function(grunt) {
 
   var jsFiles = [
-    "node_modules/respond.js/dest/respond.src.js",
-    "node_modules/html5shiv/dist/html5shiv.js",
-    "node_modules/bootstrap/dist/js/bootstrap.js",
+    "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
   ];
 
   grunt.initConfig({
-    less: {
-      dev: {
-        options: {
-          paths: ["."]
-        },
-        files: {
-          "style.css": "less/style.less",
-        },
-      }
-    },
-    watch: {
-      less: {
-        files: "less/**.less",
-        tasks: ['less']
-      },
-    },
-    uglify: {
-      dist: {
-        files: {
-          'app.min.js': [
-            "node_modules/respond.js/dest/respond.src.js",
-            "node_modules/html5shiv/dist/html5shiv.js",
-            "node_modules/bootstrap/dist/js/bootstrap.js",
-          ],
-        }
-      }
-    },
     copy: {
       js: {
         files: [
           {expand: true, flatten: true, src: jsFiles, dest: 'js/'},
-        ],
-      },
-      fonts: {
-        files: [
-          {expand: true, flatten: true, src: ['node_modules/bootstrap/dist/fonts/*'], dest: 'fonts/'},
         ],
       },
     },
@@ -72,16 +38,10 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
-  grunt.registerTask('make', ['less', 'uglify', 'copy:fonts', 'copy:js']);
-  grunt.registerTask('dist', ['make', 'compress']);
-  grunt.registerTask('watcher', ['make', 'watch']);
+  grunt.registerTask('dist', ['copy:js', 'compress']);
 
-  grunt.registerTask('default', ['make']);
 
 };
