@@ -31,8 +31,7 @@
     overflow-x: hidden;
     
     &.block-title {
-        padding-top: ($block-padding - $spacer);
-        padding-bottom: $block-padding;
+        padding-bottom: $block-padding - 1rem;
     }
 }
 
