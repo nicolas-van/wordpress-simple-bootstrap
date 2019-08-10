@@ -19,5 +19,4 @@ Simple Boostrap is bundled with:
 
 Images displayed in the screenshot:
 
-- Unnamed image by Treza Trisnandhy ( CC0 - https://unsplash.com/photos/-09QE4q0ezw )
-- After the Rain by Jarosław Puszczyński ( CC0 - https://tookapic.com/jpuszczynski/15186-after-the-rain )
+- Unnamed image by Felipe Rizo ( CC0 - https://unsplash.com/photos/qY5_Ws1DwK8 )
