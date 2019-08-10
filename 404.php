@@ -11,7 +11,9 @@
 				<p>
 					<?php _e("Page not found", "simple-bootstrap"); ?>
 				</p>
-				<?php get_search_form(); ?>
+				<p>
+					<?php get_search_form(); ?>
+				</p>
 		
 			</section>
 		
