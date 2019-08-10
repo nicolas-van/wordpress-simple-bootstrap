@@ -17,9 +17,9 @@
 			<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
 				<div class="container">
 		  
-					<?php if (has_nav_menu("main_nav")): ?>
 					<a class="navbar-brand"
 						href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+					<?php if (has_nav_menu("main_nav")): ?>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="<?php _e('Navigation', 'simple-bootstrap'); ?>">
