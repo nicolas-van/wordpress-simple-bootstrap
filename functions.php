@@ -111,11 +111,12 @@ class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu {
 
         $dropdown = $args->has_children && $depth == 0;
 
-        $class_names = $value = '';
+        $value = '';
+        $class_names = 'nav-item ';
 
         // If the item has children, add the dropdown class for bootstrap
         if ( $dropdown ) {
-            $class_names = "dropdown ";
+            $class_names .= "dropdown ";
         }
 
         $classes = empty( $object->classes ) ? array() : (array) $object->classes;
@@ -125,10 +126,13 @@ class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu {
 
         $output .= $indent . '<li id="menu-item-'. $object->ID . '"' . $value . $class_names .'>';
 
+        $attributes = '';
+
         if ( $dropdown ) {
-            $attributes = ' href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"';
+            $attributes .= ' href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"';
         } else {
-            $attributes  = ! empty( $object->attr_title ) ? ' title="'  . esc_attr( $object->attr_title ) .'"' : '';
+            $attributes .= ' class="nav-link"';
+            $attributes .= ! empty( $object->attr_title ) ? ' title="'  . esc_attr( $object->attr_title ) .'"' : '';
             $attributes .= ! empty( $object->target )     ? ' target="' . esc_attr( $object->target     ) .'"' : '';
             $attributes .= ! empty( $object->xfn )        ? ' rel="'    . esc_attr( $object->xfn        ) .'"' : '';
             $attributes .= ! empty( $object->url )        ? ' href="'   . esc_attr( $object->url        ) .'"' : '';
@@ -181,7 +185,7 @@ function simple_bootstrap_display_main_menu() {
         array( 
             'theme_location' => 'main_nav', /* where in the theme it's assigned */
             'menu' => 'main_nav', /* menu name */
-            'menu_class' => 'nav navbar-nav',
+            'menu_class' => 'navbar-nav mr-auto',
             'container' => false, /* container class */
             'depth' => 2,
             'walker' => new simple_bootstrap_Bootstrap_walker(),

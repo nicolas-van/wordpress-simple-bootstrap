@@ -17,24 +17,21 @@
 			<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
 				<div class="container">
 		  
-					<div class="navbar-header">
-						<?php if (has_nav_menu("main_nav")): ?>
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-responsive-collapse">
-		    				<span class="sr-only"><?php _e('Navigation', 'simple-bootstrap'); ?></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<?php endif ?>
-						<a class="navbar-brand" title="<?php bloginfo('description'); ?>" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-					</div>
+					<?php if (has_nav_menu("main_nav")): ?>
+					<a class="navbar-brand"
+						href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="<?php _e('Navigation', 'simple-bootstrap'); ?>">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<?php endif ?>
 
 					<?php if (has_nav_menu("main_nav")): ?>
-					<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
+					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<?php
 						    simple_bootstrap_display_main_menu();
 						?>
-
 					</div>
 					<?php endif ?>
 
