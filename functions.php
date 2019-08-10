@@ -111,7 +111,6 @@ class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu {
 
         $dropdown = $args->has_children && $depth == 0;
 
-        $value = '';
         $class_names = 'nav-item ';
 
         // If the item has children, add the dropdown class for bootstrap
@@ -122,16 +121,20 @@ class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu {
         $classes = empty( $object->classes ) ? array() : (array) $object->classes;
 
         $class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $object ) );
-        $class_names = ' class="'. esc_attr( $class_names ) . '"';
 
-        $output .= $indent . '<li id="menu-item-'. $object->ID . '"' . $value . $class_names .'>';
-
+        if ($depth == 0) {
+            $output .= $indent . '<li id="menu-item-'. $object->ID . '" class="'. esc_attr( $class_names ) . '">';
+        }
         $attributes = '';
 
         if ( $dropdown ) {
             $attributes .= ' href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"';
         } else {
-            $attributes .= ' class="nav-link"';
+            if ($depth == 0) {
+                $attributes .= ' class="nav-link"';
+            } else {
+                $attributes .= ' class="dropdown-item"';
+            }
             $attributes .= ! empty( $object->attr_title ) ? ' title="'  . esc_attr( $object->attr_title ) .'"' : '';
             $attributes .= ! empty( $object->target )     ? ' target="' . esc_attr( $object->target     ) .'"' : '';
             $attributes .= ! empty( $object->xfn )        ? ' rel="'    . esc_attr( $object->xfn        ) .'"' : '';
@@ -139,24 +142,29 @@ class simple_bootstrap_Bootstrap_walker extends Walker_Nav_Menu {
         }
 
         $item_output = $args->before;
-        $item_output .= '<a'. $attributes .'>';
+        $item_output .= "\n<a". $attributes .'>';
         $item_output .= $args->link_before .apply_filters( 'the_title', $object->title, $object->ID );
         $item_output .= $args->link_after;
 
-        // if the item has children add the caret just before closing the anchor tag
-        if ( $dropdown ) {
-            $item_output .= ' <b class="caret"></b>';
-        }
-        $item_output .= '</a>';
+        $item_output .= "</a>\n";
 
         $item_output .= $args->after;
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $object, $depth, $args );
-    } // end start_el function
+    }
+
+    function end_el(&$output, $object, $depth = 0, $args = Array(), $current_object_id = 0) {
+        if ($depth == 0) {
+            $output .= "</li>\n";
+        }
+    }
     
     function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class='dropdown-menu' role='menu'>\n";
+        $output .= "<div class='dropdown-menu' role='menu'>\n";
+    }
+
+    function end_lvl(&$output, $depth = 0, $args = Array()) {
+        $output .= "</div>\n";
     }
     
     function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ){

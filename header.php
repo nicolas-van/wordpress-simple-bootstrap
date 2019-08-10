@@ -44,7 +44,7 @@
             <div class="header-image" style="background-image: url(<?php echo get_header_image(); ?>)">
                 <div class="container pt-5">
                     <?php if (display_header_text()): ?>
-                    <div class="site-title mb-3" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo('name') ?></div>
+                    <div class="site-title mb-4" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo('name') ?></div>
                     <div class="site-description" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo('description') ?></div>
                     <?php endif ?>
                 </div>
