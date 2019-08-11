@@ -19,4 +19,4 @@ Simple Boostrap is bundled with:
 
 Images displayed in the screenshot:
 
-- Unnamed image by Felipe Rizo ( CC0 - https://unsplash.com/photos/qY5_Ws1DwK8 )
+- Unnamed image by Felipe Rizo (CC0 - https://unsplash.com/photos/qY5_Ws1DwK8)
