@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) ![WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/simple-bootstrap) ![WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/simple-bootstrap)
 
-Simple Bootstrap is a basic Wordpress theme using Boostrap 3, mostly aimed as a starting point for developers to build their own themes using Bootstrap.
+Simple Bootstrap is a basic Wordpress theme using Boostrap 4, mostly aimed as a starting point for developers to build their own themes using Bootstrap.
 
 It is build to very clean, responsive and easy to modify. It supports customizable background, image header and both left and right sidebars (the sidebars only appear if you put widgets in them).
 
@@ -17,7 +17,7 @@ It is build to very clean, responsive and easy to modify. It supports customizab
 
 ## Extension guide
 
-Let's state it clearly once and for all: trying to put some CSS above a pre-compiled Bootstrap is a very bad practice. The proper way to extend Bootstrap is to alter its behavior using [LESS](http://lesscss.org/) and to re-compile it. Here is how to do so.
+Let's state it clearly once and for all: trying to put some CSS above a pre-compiled Bootstrap is a very bad practice. The proper way to extend Bootstrap is to alter its behavior using [SCSS](https://sass-lang.com/) and to re-compile it. Here is how to do so.
 
 ### Requirements
 
@@ -29,11 +29,11 @@ Let's state it clearly once and for all: trying to put some CSS above a pre-comp
 npm install
 ```
 
-### Modify LESS files
+### Modify SCSS files
 
-They are located in the `less` folder.
+They are located in the `scss` folder.
 
-### Compile LESS files
+### Compile SCSS files
 
 ```
 npm run build
