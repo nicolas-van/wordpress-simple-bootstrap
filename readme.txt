@@ -1,7 +1,7 @@
 === Simple Bootstrap ===
 
 Contributors: nicolas-vanhoren
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 Requires at least: 5.0
 Tested up to: 5.2
 Requires PHP: 5.6
@@ -27,7 +27,7 @@ Released under the terms of the MIT license.
 
 == Changelog ==
 
-= 2.0.4 =
+= 2.0.3 =
 
 * Added Categories because they were forgotten and changed details in meta display
 
