@@ -1,7 +1,7 @@
 === Simple Bootstrap ===
 
 Contributors: nicolas-vanhoren
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 Requires at least: 5.0
 Tested up to: 5.2
 Requires PHP: 5.6
