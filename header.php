@@ -11,6 +11,8 @@
 	
 <body <?php body_class(); ?>>
 
+	<?php wp_body_open(); ?>
+
 	<a class="skip-link screen-reader-text" href="#main">
 		<?php _e( 'Skip to content', 'simple-bootstrap' ); ?>
 	</a>
