@@ -19,6 +19,7 @@ See here for documentation: [http://nicolas-van.github.io/wordpress-simple-boots
 == Copyright ==
 
 Copyright 2015 Nicolas Vanhoren
+
 Released under the terms of the MIT license.
 
 == Frequently Asked Questions ==
