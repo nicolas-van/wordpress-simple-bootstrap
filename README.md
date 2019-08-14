@@ -41,8 +41,8 @@ npm run build
 
 ## Supported browsers
 
-- IE up to IE8
 - Latest version of all other major browsers
+- Internet Explorer 10 and up
 
 ## How to contribute
 
