@@ -28,6 +28,10 @@ Released under the terms of the MIT license.
 
 == Changelog ==
 
+= 2.0.3 =
+
+* Added Categories because they were forgotten and changed details in meta display
+
 = 2.0.2 =
 
 * Fixed issue with columns when using sidebars
