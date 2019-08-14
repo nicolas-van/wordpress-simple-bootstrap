@@ -25,7 +25,8 @@ module.exports = function(grunt) {
             dest: '/',
             filter: function(path) {
               if (/^simple-bootstrap.zip$/.test(path) ||
-                /^node_modules\b\/?/.test(path)
+                /^node_modules\b\/?/.test(path) ||
+                /^.sass-cache\/?/.test(path)
                 ) {
                 return false;
               }
