@@ -211,12 +211,14 @@ function simple_bootstrap_display_post_meta($short=true) {
         <li class="list-inline-item">
             <a href="<?php the_permalink() ?>">
                 <i class="fas fa-clock"></i>
+                <span class="sr-only"><?php echo __( 'Posted on', 'simple-bootstrap' ) ?></span>
                 <?php echo get_the_date(); ?>
             </a>
         </li>
         <li class="list-inline-item">
             <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'));?>">
                 <i class="fas fa-user"></i>
+                <span class="sr-only"><?php echo __( 'Posted by', 'simple-bootstrap' ) ?></span>
                 <?php the_author(); ?>
             </a>
         </li>
@@ -242,7 +244,7 @@ function simple_bootstrap_display_post_meta($short=true) {
         <?php if ( $tags_list ) : ?>
         <li class="list-inline-item">
             <i class="fas fa-tag"></i>
-            <span class="screen-reader-text"><?php echo __( 'Tags:', 'simple-bootstrap' ) ?></span>
+            <span class="sr-only"><?php echo __( 'Tags:', 'simple-bootstrap' ) ?></span>
             <?php echo $tags_list ?>
         </li>
         <?php endif ?>

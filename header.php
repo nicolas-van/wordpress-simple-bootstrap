@@ -28,7 +28,7 @@
 					<?php if (has_nav_menu("main_nav")): ?>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="<?php _e('Navigation', 'simple-bootstrap'); ?>">
+						aria-expanded="false" aria-label="<?php _e('Toggle Navigation', 'simple-bootstrap'); ?>">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<?php endif ?>
