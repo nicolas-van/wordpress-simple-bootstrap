@@ -90,13 +90,6 @@ img {
     }
 }
 
-.tags {
-    a {
-        @extend .badge;
-        @extend .badge-secondary;
-    }
-}
-
 /* comments */
 
 #comments {

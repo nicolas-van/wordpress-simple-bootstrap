@@ -204,7 +204,7 @@ function simple_bootstrap_display_main_menu() {
 /*
   A function used in multiple places to generate the metadata of a post.
 */
-function simple_bootstrap_display_post_meta() {
+function simple_bootstrap_display_post_meta($short=true) {
 ?>
 
     <ul class="meta text-muted list-inline">
@@ -228,7 +228,27 @@ function simple_bootstrap_display_post_meta() {
             ?>
         </li>
         <?php endif; ?>
+        <?php if (! $short) : ?>
+
+        <?php $categories_list = get_the_category_list(', '); ?>
+        <?php if ( $categories_list ) : ?>
+        <li class="list-inline-item">
+            <i class="fas fa-folder"></i>
+            <span class="sr-only"><?php echo __( 'Posted in', 'simple-bootstrap' ) ?></span>
+            <?php echo $categories_list ?>
+        </li>
+        <?php endif ?>
+        <?php $tags_list = get_the_tag_list('', ', '); ?>
+        <?php if ( $tags_list ) : ?>
+        <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+            <span class="screen-reader-text"><?php echo __( 'Tags:', 'simple-bootstrap' ) ?></span>
+            <?php echo $tags_list ?>
+        </li>
+        <?php endif ?>
+
         <?php edit_post_link(__( 'Edit', "simple-bootstrap"), '<li class="list-inline-item"><i class="fas fa-pencil-alt"></i> ', '</li>'); ?>
+        <?php endif ?>
     </ul>
 
 <?php
@@ -277,7 +297,7 @@ function simple_boostrap_display_post($multiple_on_page) { ?>
             </div>
             <?php } ?>
 
-            <?php simple_bootstrap_display_post_meta() ?>
+            <?php simple_bootstrap_display_post_meta($multiple_on_page) ?>
         
         </header>
     
@@ -291,10 +311,6 @@ function simple_boostrap_display_post($multiple_on_page) { ?>
             }
             ?>
         </section>
-        
-        <footer>
-            <?php the_tags('<p class="tags">', ' ', '</p>'); ?>
-        </footer>
     
     </article>
 
