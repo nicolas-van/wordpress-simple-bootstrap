@@ -13,7 +13,7 @@
 
 	<?php wp_body_open(); ?>
 
-	<a class="skip-link screen-reader-text" href="#main">
+	<a class="skip-link sr-only sr-only-focusable" href="#main">
 		<?php _e( 'Skip to content', 'simple-bootstrap' ); ?>
 	</a>
 
