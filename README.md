@@ -39,11 +39,6 @@ They are located in the `scss` folder.
 npm run build
 ```
 
-## Supported browsers
-
-- IE up to IE8
-- Latest version of all other major browsers
-
 ## How to contribute
 
 [See the contribution guide](./CONTRIBUTING.md).
