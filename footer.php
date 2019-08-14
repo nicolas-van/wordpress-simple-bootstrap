@@ -7,8 +7,9 @@
                 <div class="container">
                     <div class="row">
                         <?php dynamic_sidebar('footer1'); ?>
-
-                        <div class="col-12 text-center">
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
                             <p><?php _e('This website uses the <a href="http://nicolas-van.github.io/wordpress-simple-bootstrap/">Simple Bootstrap</a> theme', 'simple-bootstrap') ?></p>
                             <p><?php _e("Powered by WordPress", "simple-bootstrap"); ?></p>
                         </div>

@@ -93,7 +93,7 @@ function simple_boostrap_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer1',
       'name' => __('Footer', 'simple-bootstrap'),
-      'before_widget' => '<div id="%1$s" class="widget col-6 col-sm-4 col-md-3 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-sm %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',
@@ -302,28 +302,28 @@ function simple_boostrap_display_post($multiple_on_page) { ?>
 
 function simple_boostrap_main_classes() {
     if (! is_active_sidebar('sidebar-left') && ! is_active_sidebar('sidebar-right')) { // no columns
-        echo "col-md-8 col-md-push-2";
+        echo "col-md-10";
     } else if (! is_active_sidebar('sidebar-right')) { // only left
-        echo "col-md-8 col-md-push-4";
+        echo "col-md-8";
     } else if (! is_active_sidebar('sidebar-left')) { // only right
         echo "col-md-8";
     } else { // both columns
-        echo "col-md-6 col-md-push-3";
+        echo "col-md-6";
     }
 }
 
 function simple_boostrap_sidebar_left_classes() {
     if (! is_active_sidebar('sidebar-right')) { // only left
-        echo 'col-md-4 col-md-pull-8';
+        echo 'col-md-4 order-first';
     } else { // both columns
-        echo 'col-md-3 col-md-pull-6';
+        echo 'col-md-3 order-first';
     }
 }
 
 function simple_boostrap_sidebar_right_classes() {
     if (! is_active_sidebar('sidebar-left')) { // only right
-        echo 'col-md-4';
+        echo 'col-md-4 order-last';
     } else { // both columns
-        echo 'col-md-3';
+        echo 'col-md-3 order-last';
     }
 }

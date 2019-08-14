@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="content" class="row">
+<div id="content" class="row justify-content-center">
 
 	<div id="main" class="<?php simple_boostrap_main_classes(); ?>" role="main">
 		
