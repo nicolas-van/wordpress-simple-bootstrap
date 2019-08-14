@@ -27,6 +27,10 @@ Released under the terms of the MIT license.
 
 == Changelog ==
 
+= 2.0.2 =
+
+* Fixed issue with columns when using sidebars
+
 = 2.0.0 =
 
 * Ported to Bootstrap 4
