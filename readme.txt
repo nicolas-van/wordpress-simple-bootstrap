@@ -8,11 +8,11 @@ Requires PHP: 5.6
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
-A clean WordPress theme using Boostrap 4.
+A clean WordPress theme using Twitter Boostrap 4.
 
 == Description ==
 
-Simple Bootstrap is a basic WordPress theme using Boostrap 4, mostly aimed as a starting point for developers to build their own themes using Bootstrap.
+Simple Bootstrap is a simple WordPress theme using Twitter Boostrap 4, mostly aimed as a starting point for developers to build their own themes using Bootstrap.
 
 It is build to very clean, responsive and easy to modify. It supports customizable background, image header and both left and right sidebars (the sidebars only appear if you put widgets in them).
 
