@@ -11,6 +11,10 @@
 	
 <body <?php body_class(); ?>>
 
+	<a class="skip-link screen-reader-text" href="#main">
+		<?php _e( 'Skip to content', 'simple-bootstrap' ); ?>
+	</a>
+
 	<div id="content-wrapper">
 
 		<header>
