@@ -4,11 +4,16 @@
 
 Simple Bootstrap is clean base theme to use Twitter Boostrap 4 with Wordpress, aimed at being a starting point for developers to build their own themes using Bootstrap.
 
-It is build to very clean, responsive and easy to modify. It supports customizable background, image header and both left and right sidebars (the sidebars only appear if you put widgets in them).
-
 <p align="center">
   <img src="./screenshot.png" width="500px">
 </p>
+
+* Very clean default graphical aspect.
+* Clean code designed to be modified by theme creators.
+* All base features of Wordpress themes (sidebars, menus, footer, header image, background, etc...)
+* All the features of Bootstrap 4, perfectly integrated with Wordpress.
+* Designed to use SCSS.
+* Integrates Font-Awesome for the icons.
 
 ## Links
 
