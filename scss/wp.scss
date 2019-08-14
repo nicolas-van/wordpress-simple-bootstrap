@@ -371,6 +371,10 @@ body {
 .gallery-caption {/**/}
 .bypostauthor {/**/}
 
+.screen-reader-text {
+    @extend .sr-only;
+}
+
 .header-image {
     background-position: top center;
     background-size: cover;
