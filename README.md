@@ -1,6 +1,6 @@
 # Wordress Simple Bootstrap
 
-[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) ![WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/simple-bootstrap) ![WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/simple-bootstrap)
+[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) ![WordPress Theme Downloads](https://wordpress.org/themes/simple-bootstrap/) ![WordPress Theme Active Installs](https://wordpress.org/themes/simple-bootstrap/)
 
 Simple Bootstrap is clean base theme to use Twitter Boostrap 4 with Wordpress, aimed at being a starting point for developers to build their own themes using Bootstrap.
 
