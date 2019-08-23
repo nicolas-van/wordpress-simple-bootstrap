@@ -14,6 +14,10 @@ We currently allow our users to use the issue tracker for support questions. But
 
 ## How Can I Contribute?
 
+### Translations
+
+You can translate this theme in your language using the [dedicated page on Wordpress.org](https://translate.wordpress.org/projects/wp-themes/simple-bootstrap/).
+
 ### Reporting Bugs
 
 Before creating bug reports, please check the existing bug reports as you might find out that you don't need to create one. When you are creating a bug report, please include as many details as possible.
