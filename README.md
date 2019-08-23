@@ -45,7 +45,7 @@ They are located in the `scss` folder.
 npm run build
 ```
 
-## How to contribute
+## Report issues and contribute
 
 [See the contribution guide](./CONTRIBUTING.md).
 
