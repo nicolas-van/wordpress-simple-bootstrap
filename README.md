@@ -1,6 +1,6 @@
 # Wordress Simple Bootstrap
 
-[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) ![WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/simple-bootstrap) ![WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/simple-bootstrap)
+[![Build Status](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap.svg?branch=master)](https://travis-ci.org/nicolas-van/wordpress-simple-bootstrap) [![WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/simple-bootstrap)](https://wordpress.org/themes/simple-bootstrap/) [![WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/simple-bootstrap)](https://wordpress.org/themes/simple-bootstrap/)
 
 Simple Bootstrap is clean base theme to use Twitter Boostrap 4 with Wordpress, aimed at being a starting point for developers to build their own themes using Bootstrap.
 
@@ -12,6 +12,7 @@ Simple Bootstrap is clean base theme to use Twitter Boostrap 4 with Wordpress, a
 * Clean code designed to be modified by theme creators.
 * All base features of Wordpress themes (sidebars, menus, footer, header image, background, etc...)
 * All the features of Bootstrap 4, perfectly integrated with Wordpress.
+* Fully responsive.
 * Designed to use SCSS.
 * Integrates Font-Awesome for the icons.
 
@@ -44,7 +45,7 @@ They are located in the `scss` folder.
 npm run build
 ```
 
-## How to contribute
+## Report issues and contribute
 
 [See the contribution guide](./CONTRIBUTING.md).
 
