@@ -1,6 +1,6 @@
 {
   "name": "simple-bootstrap",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Basic Wordpress theme using Boostrap. Built to be very clean.",
   "main": "Gruntfile.js",
   "dependencies": {
