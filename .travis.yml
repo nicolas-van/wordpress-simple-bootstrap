@@ -5,3 +5,13 @@ node_js:
 - node
 before_script:
 - npm run build
+before_deploy:
+- npm run dist
+- mv simple-bootstrap.zip simple-bootstrap-$TRAVIS_TAG.zip
+deploy:
+  provider: releases
+  api_key: "$GITHUB_TOKEN"
+  file: "simple-bootstrap-$TRAVIS_TAG.zip"
+  skip_cleanup: true
+  on:
+    tags: true
